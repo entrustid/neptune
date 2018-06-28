@@ -1,0 +1,4 @@
+[06/28/2018] AD live sync does not work as expected
+    + After the AD LDAP resource was imported, connection was tested correctly;
+    + After the ad-import and ad-recon tasks were imported, synchronization was working as expected;
+    - After the ad-live task was imported, the live sync did not work at all

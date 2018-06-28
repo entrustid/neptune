@@ -1,0 +1,21 @@
+<task oid="bbe4ceac-a85c-11e7-a49f-0f5777d22906"
+        xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+        xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+        xmlns:mext="http://midpoint.evolveum.com/xml/ns/public/model/extension-3"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <name>AD Reconciliation</name>
+    <extension>
+        <mext:kind>account</mext:kind>
+    </extension>
+    <taskIdentifier>bbe4ceac-a85c-11e7-a49f-0f5777d22906</taskIdentifier>
+    <ownerRef oid="00000000-0000-0000-0000-000000000002"/>
+    <executionStatus>runnable</executionStatus>
+    <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/synchronization/task/reconciliation/handler-3</handlerUri>
+    <objectRef oid="746ecf5e-3e8c-11e6-b2f9-3c970e44b9e2" type="c:ResourceType"/>
+    <recurrence>recurring</recurrence>
+    <schedule>
+        <cronLikePattern>0 0 1 ? * SAT</cronLikePattern>
+        <misfireAction>executeImmediately</misfireAction>
+   </schedule>
+</task>
