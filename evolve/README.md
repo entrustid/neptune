@@ -21,6 +21,16 @@ Imported:
   object-template-org.xml
   object-template-user.xml
   roles.xml
-  
+
   org-users.xml
   role-catalog.xml
+
+Quick Start:
+  import resources:
+    resource-openldap.xml
+
+  import org-roles-users
+    shortcut-role-org-user.xml
+
+  import resource:
+    resource-hr.xml
