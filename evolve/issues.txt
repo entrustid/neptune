@@ -1,0 +1,1 @@
+There are cyclic reference inside an xml file, but it's ok.
