@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c:objects xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
+    xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" 
+    xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" 
+    xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" 
+    xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" 
+    xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3" 
+    xmlns:syncext="http://midpoint.evolveum.com/xml/ns/public/model/extension-3">
+
+    <c:resource oid="66245ea2-07d9-11e7-ac98-67b627683b1b">
+
+        <name>HR</name>
+        <description>HR data source simulated by CSV file</description>
+
+        <connectorRef type="ConnectorType">
+            <filter>
+                <q:equal>
+                    <q:path>c:connectorType</q:path>
+                    <q:value>com.evolveum.polygon.connector.csv.CsvConnector</q:value>
+                </q:equal>
+            </filter>
+        </connectorRef>
+
+        <connectorConfiguration xmlns:icfi="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-csv/com.evolveum.polygon.connector.csv.CsvConnector">
+
+            <icfc:configurationProperties>
+                <icfi:filePath>/Users/weiwang/sandbox/entrustid/neptune/evolve/hr.csv</icfi:filePath>
+                <icfi:encoding>utf-8</icfi:encoding>
+                <icfi:fieldDelimiter>,</icfi:fieldDelimiter>
+                <icfi:multivalueDelimiter>;</icfi:multivalueDelimiter>
+                <icfi:uniqueAttribute>empno</icfi:uniqueAttribute>
+            </icfc:configurationProperties>
+
+        </connectorConfiguration>
+
+        <schemaHandling>
+
+            <objectType>
+                <default>true</default>
+                <displayName>CSV Default Account</displayName>
+                <objectClass>ri:AccountObjectClass</objectClass>
+
+                <attribute>
+                    <ref>ri:empno</ref>
+                    <displayName>Employee ID</displayName>
+                    <inbound>
+                        <target>
+                            <path>$focus/name</path>
+                        </target>
+                    </inbound>
+                    <inbound>
+                        <target>
+                            <path>$focus/employeeNumber</path>
+                        </target>
+                    </inbound>
+                </attribute>
+
+                <attribute>
+                    <ref>ri:fullname</ref>
+                    <displayName>Full Name</displayName>
+                    <inbound>
+                        <target>
+                            <path>$focus/fullName</path>
+                        </target>
+                    </inbound>
+
+                </attribute>
+                <attribute>
+                    <ref>ri:firstname</ref>
+                    <displayName>First name</displayName>
+                    <inbound>
+                        <target>
+                            <path>$focus/givenName</path>
+                        </target>
+                    </inbound>
+
+                </attribute>
+                <attribute>
+                    <ref>ri:lastname</ref>
+                    <displayName>Last name</displayName>
+                    <inbound>
+                        <target>
+                            <path>$focus/familyName</path>
+                        </target>
+                    </inbound>
+                </attribute>
+
+                <attribute>
+                    <ref>ri:orgId</ref>
+                    <inbound>
+                        <target>
+                            <path>$focus/organizationalUnit</path>
+                        </target>
+                    </inbound>
+                </attribute>
+
+                <attribute>
+                    <ref>ri:job</ref>
+                    <inbound>
+                        <target>
+                            <path>$focus/title</path>
+                        </target>
+                    </inbound>
+                </attribute>
+
+                <activation>
+                    <administrativeStatus>
+                        <inbound>
+                            <!-- <strength>weak</strength> -->
+                        </inbound>
+                    </administrativeStatus>
+                </activation>
+
+                <credentials>
+                    <password>
+                        <inbound>
+                            <strength>weak</strength>
+                            <expression>
+                                <generate/>
+                            </expression>
+                        </inbound>
+                    </password>
+                </credentials>
+
+            </objectType>
+        </schemaHandling>
+        <!-- <capabilities xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3">
+			<configured>
+				<cap:activation>
+					<cap:status>
+						<cap:attribute>ri:active</cap:attribute>
+						<cap:enableValue>true</cap:enableValue>
+						<cap:disableValue>false</cap:disableValue>
+					</cap:status>
+				</cap:activation>
+			</configured>
+		</capabilities> -->
+        <!-- 
+		<projection>
+			<assignmentPolicyEnforcement>none</assignmentPolicyEnforcement>
+		</projection> -->
+
+        <synchronization>
+            <objectSynchronization>
+                <enabled>true</enabled>
+
+                <correlation>
+                    <q:equal>
+                        <q:path>employeeNumber</q:path>
+                        <expression>
+                            <path>$shadow/attributes/empno</path>
+                        </expression>
+                    </q:equal>
+                </correlation>
+
+                <reaction>
+                    <situation>linked</situation>
+                    <synchronize>true</synchronize>
+                </reaction>
+                <reaction>
+                    <situation>deleted</situation>
+                    <synchronize>true</synchronize>
+                    <action>
+                        <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#deleteFocus</handlerUri>
+                    </action>
+                </reaction>
+                <reaction>
+                    <situation>unlinked</situation>
+                    <synchronize>true</synchronize>
+                    <action>
+                        <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#link</handlerUri>
+                    </action>
+                </reaction>
+                <reaction>
+                    <situation>unmatched</situation>
+                    <synchronize>true</synchronize>
+                    <action>
+                        <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/action-3#addFocus</handlerUri>
+                    </action>
+                </reaction>
+            </objectSynchronization>
+        </synchronization>
+    </c:resource>
+</c:objects>
