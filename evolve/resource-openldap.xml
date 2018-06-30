@@ -114,7 +114,7 @@
 
 				<outbound>
 					<source>
-						<path>fullName</path>
+						<path>$user/fullName</path>
 					</source>
 				</outbound>
 			</attribute>
@@ -135,7 +135,7 @@
 				<displayName>Given Name</displayName>
 				<outbound>
 					<source>
-						<path>givenName</path>
+						<path>$user/givenName</path>
 					</source>
 				</outbound>
 			</attribute>
@@ -159,7 +159,7 @@
 				<outbound>
 					<strength>weak</strength>
 					<expression>
-						<value>Created by midPoint</value>
+						<value>Created by Neptune</value>
 					</expression>
 				</outbound>
 			</attribute>
@@ -170,7 +170,7 @@
 				<outbound>
 					<strength>strong</strength>
 					<source>
-						<path>emailAddress</path>
+						<path>$user/emailAddress</path>
 					</source>
 				</outbound>
 			</attribute>
@@ -190,7 +190,7 @@
 				<outbound>
 					<strength>strong</strength>
 					<source>
-						<path>employeeType</path>
+						<path>$user/employeeType</path>
 					</source>
 				</outbound>
 			</attribute>
@@ -201,7 +201,7 @@
 				<outbound>
 					<strength>strong</strength>
 					<source>
-						<path>employeeNumber</path>
+						<path>$user/employeeNumber</path>
 					</source>
 				</outbound>
 			</attribute>
