@@ -28,7 +28,7 @@
         <connectorConfiguration xmlns:icfi="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-csv/com.evolveum.polygon.connector.csv.CsvConnector">
 
             <icfc:configurationProperties>
-                <icfi:filePath>/Users/weiwang/sandbox/entrustid/neptune/Leonardos/hr.csv</icfi:filePath>
+                <icfi:filePath>/Users/weiwang/sandbox/entrustid/neptune/Leonardos/leonardo-hr.csv</icfi:filePath>
                 <icfi:encoding>utf-8</icfi:encoding>
                 <icfi:fieldDelimiter>,</icfi:fieldDelimiter>
                 <icfi:multivalueDelimiter>;</icfi:multivalueDelimiter>
