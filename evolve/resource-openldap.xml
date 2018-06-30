@@ -36,12 +36,12 @@
 	<connectorConfiguration xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3" 
 		xmlns:icfcldap="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-ldap/com.evolveum.polygon.connector.ldap.LdapConnector">
 		<icfc:configurationProperties>
-			<icfcldap:port>389</icfcldap:port>
+			<icfcldap:port>1389</icfcldap:port>
 			<icfcldap:host>localhost</icfcldap:host>
 			<icfcldap:baseContext>dc=example,dc=com</icfcldap:baseContext>
-			<icfcldap:bindDn>cn=idm,ou=Administrators,dc=example,dc=com</icfcldap:bindDn>
+			<icfcldap:bindDn>cn=Directory Manager</icfcldap:bindDn>
 			<icfcldap:bindPassword>
-				<t:clearValue>secret</t:clearValue>
+				<t:clearValue>password</t:clearValue>
 			</icfcldap:bindPassword>
 			<icfcldap:pagingStrategy>auto</icfcldap:pagingStrategy>
 			<icfcldap:passwordHashAlgorithm>SSHA</icfcldap:passwordHashAlgorithm>
@@ -206,7 +206,7 @@
 				</outbound>
 			</attribute>
 
-			<association>
+			<!-- <association>
 				<ref>ri:ldapGroup</ref>
 				<displayName>LDAP Group Membership</displayName>
 				<kind>entitlement</kind>
@@ -214,9 +214,9 @@
 				<direction>objectToSubject</direction>
 				<associationAttribute>ri:member</associationAttribute>
 				<valueAttribute>ri:dn</valueAttribute>
-			</association>
+			</association> -->
 
-			<association>
+			<!-- <association>
 				<ref>ri:posixGroup</ref>
 				<displayName>POSIX Group Membership</displayName>
 				<kind>entitlement</kind>
@@ -224,13 +224,13 @@
 				<direction>objectToSubject</direction>
 				<associationAttribute>ri:memberUid</associationAttribute>
 				<valueAttribute>ri:uid</valueAttribute>
-			</association>
+			</association> -->
 
 			<iteration>
 				<maxIterations>5</maxIterations>
 			</iteration>
 
-			<protected>
+			<!-- <protected>
 				<filter>
 					<q:equal>
 						<q:matching>http://prism.evolveum.com/xml/ns/public/matching-rule-3#stringIgnoreCase</q:matching>
@@ -238,7 +238,7 @@
 						<q:value>cn=idm,ou=Administrators,dc=example,dc=com</q:value>
 					</q:equal>
 				</filter>
-			</protected>
+			</protected> -->
 
 			<activation>
 				<administrativeStatus>
@@ -260,7 +260,7 @@
 			</credentials>
 		</objectType>
 
-		<objectType>
+		<!-- <objectType>
 			<kind>entitlement</kind>
 			<intent>ldapGroup</intent>
 			<displayName>LDAP Group</displayName>
@@ -314,9 +314,9 @@
 					<cap:defaultSortField>ri:cn</cap:defaultSortField>
 				</cap:pagedSearch>
 			</configuredCapabilities>
-		</objectType>
+		</objectType> -->
 
-		<objectType>
+		<!-- <objectType>
 			<kind>entitlement</kind>
 			<intent>posixGroup</intent>
 			<displayName>POSIX Group</displayName>
@@ -360,7 +360,7 @@
 					<cap:defaultSortField>ri:cn</cap:defaultSortField>
 				</cap:pagedSearch>
 			</configuredCapabilities>
-		</objectType>
+		</objectType> -->
 	</schemaHandling>
 
 	<synchronization>
@@ -402,7 +402,7 @@
 			</reaction>
 		</objectSynchronization>
 
-		<objectSynchronization>
+		<!-- <objectSynchronization>
 			<objectClass>ri:groupOfNames</objectClass>
 			<kind>entitlement</kind>
 			<intent>ldapGroup</intent>
@@ -438,9 +438,9 @@
 					</handlerUri>
 				</action>
 			</reaction>
-		</objectSynchronization>
+		</objectSynchronization> -->
 
-		<objectSynchronization>
+		<!-- <objectSynchronization>
 			<objectClass>ri:posixGroup</objectClass>
 			<kind>entitlement</kind>
 			<intent>posixGroup</intent>
@@ -476,6 +476,6 @@
 					</handlerUri>
 				</action>
 			</reaction>
-		</objectSynchronization>
+		</objectSynchronization> -->
 	</synchronization>
 </resource>
