@@ -9,7 +9,7 @@
 	<name>EVE Org Template</name>
 
 	<mapping>
-		<name>template-org-meta-project</name>
+		<name>Eve template-org-meta-project</name>
 		<strength>strong</strength>
 		<source>
 			<path>orgType</path>

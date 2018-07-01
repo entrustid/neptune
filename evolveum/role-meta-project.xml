@@ -6,7 +6,7 @@
 	xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" 
 	xmlns:piracy="http://midpoint.evolveum.com/xml/ns/samples/piracy">
 
-	<name>EVE Project Metarole</name>
+	<name>Eve Project Metarole</name>
 
 	<inducement>
 		<construction>
@@ -124,5 +124,6 @@
 			</expression>
 		</condition>
 	</inducement>
-
+	
+	<roleType>meta</roleType>
 </role>

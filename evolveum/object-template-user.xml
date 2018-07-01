@@ -9,7 +9,7 @@
 	<name>EVE User Template</name>
 
 	<mapping>
-		<name>template-user-name</name>
+		<name>Eve template-user-name</name>
 		<strength>weak</strength>
 		<source>
 			<path>givenName</path>
@@ -43,7 +43,7 @@
 		</source>
 		<expression>
 			<script>
-				<code>givenName.getNorm() + '.' + familyName.getNorm() + '@evolveum.com'</code>
+				<code>givenName.getNorm() + '.' + familyName.getNorm() + '@example.com'</code>
 			</script>
 		</expression>
 		<target>
