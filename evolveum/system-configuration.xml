@@ -85,16 +85,16 @@
         </focusSelector>
     </globalPolicyRule>
 
-   <defaultObjectPolicyConfiguration>
-      <type>c:UserType</type>
-      <objectTemplateRef oid="7d47f920-07db-11e7-97ab-9f2adc778984"
-                         relation="org:default"
-                         type="c:ObjectTemplateType"><!-- EVE User Template --></objectTemplateRef>
-   </defaultObjectPolicyConfiguration>
-   <defaultObjectPolicyConfiguration id="3">
-      <type>c:OrgType</type>
-      <objectTemplateRef oid="c4246978-107e-11e6-8818-8b900a1eb9d9"
-                         relation="org:default"
-                         type="c:ObjectTemplateType"><!-- EVE Org Template --></objectTemplateRef>
-   </defaultObjectPolicyConfiguration>
+    <defaultObjectPolicyConfiguration>
+        <type>c:UserType</type>
+        <objectTemplateRef oid="7d47f920-07db-11e7-97ab-9f2adc778984" relation="org:default" type="c:ObjectTemplateType">            <!-- EVE User Template --></objectTemplateRef>
+    </defaultObjectPolicyConfiguration>
+    <defaultObjectPolicyConfiguration id="3">
+        <type>c:OrgType</type>
+        <objectTemplateRef oid="c4246978-107e-11e6-8818-8b900a1eb9d9" relation="org:default" type="c:ObjectTemplateType">            <!-- EVE Org Template --></objectTemplateRef>
+    </defaultObjectPolicyConfiguration>
+
+    <roleManagement>
+        <roleCatalogRef oid="00000000-ee88-6666-0000-c00000000000"/>
+    </roleManagement>
 </systemConfiguration>

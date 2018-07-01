@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ Copyright (c) 2017 Evolveum
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~     http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
- 
-<objects xmlns='http://midpoint.evolveum.com/xml/ns/public/common/common-3'
-         xmlns:c='http://midpoint.evolveum.com/xml/ns/public/common/common-3'
-         xmlns:org='http://midpoint.evolveum.com/xml/ns/public/common/org-3'
-         xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
-         xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">
-         
-    <org oid="00000000-ee88-6666-0000-c00000000000">
+<objects xmlns='http://midpoint.evolveum.com/xml/ns/public/common/common-3' 
+	xmlns:c='http://midpoint.evolveum.com/xml/ns/public/common/common-3' 
+	xmlns:org='http://midpoint.evolveum.com/xml/ns/public/common/org-3' 
+	xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" 
+	xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">
+
+	<org oid="00000000-ee88-6666-0000-c00000000000">
 		<name>R0000</name>
 		<displayName>Role Catalog</displayName>
 		<orgType>roleCatalog</orgType>
 	</org>
-	
+
 	<org oid="00000000-ee88-6666-0000-c0000000a000">
 		<name>RA000</name>
 		<parentOrgRef oid="00000000-ee88-6666-0000-c00000000000" type="c:OrgType"/>
@@ -36,7 +20,7 @@
 		<displayName>Testing Roles</displayName>
 		<orgType>roleCategory</orgType>
 	</org>
-	
+
 	<org oid="00000000-ee88-6666-0000-c00000001000">
 		<name>R1000</name>
 		<parentOrgRef oid="00000000-ee88-6666-0000-c00000000000" type="c:OrgType"/>
@@ -55,24 +39,25 @@
 		</assignment>
 		<inducement>
 			<construction>
-				<resourceRef oid="28b699cc-107c-11e6-8277-034841879377"/> <!-- LDAP resource -->
+				<resourceRef oid="28b699cc-107c-11e6-8277-034841879377"/>
+				<!-- LDAP resource -->
 				<kind>account</kind>
 				<association>
-				    <ref>ri:ldapGroup</ref>
-				    <outbound>
-				       <expression>
-					  <associationTargetSearch>
-					     <filter>
-						<q:equal>
-						   <q:path>attributes/cn</q:path>
-						   <q:value>jira-users</q:value>
-						</q:equal>
-					     </filter>
-					     <searchOnResource>true</searchOnResource>
-					  </associationTargetSearch>
-				       </expression>
-				    </outbound>
-				 </association>
+					<ref>ri:ldapGroup</ref>
+					<outbound>
+						<expression>
+							<associationTargetSearch>
+								<filter>
+									<q:equal>
+										<q:path>attributes/cn</q:path>
+										<q:value>jira-users</q:value>
+									</q:equal>
+								</filter>
+								<searchOnResource>true</searchOnResource>
+							</associationTargetSearch>
+						</expression>
+					</outbound>
+				</association>
 			</construction>
 		</inducement>
 		<requestable>true</requestable>
@@ -87,28 +72,30 @@
 		</assignment>
 		<inducement>
 			<construction>
-				<resourceRef oid="28b699cc-107c-11e6-8277-034841879377"/> <!-- LDAP resource -->
+				<resourceRef oid="28b699cc-107c-11e6-8277-034841879377"/>
+				<!-- LDAP resource -->
 				<kind>account</kind>
 				<association>
-				    <ref>ri:ldapGroup</ref>
-				    <outbound>
-				       <expression>
-					  <associationTargetSearch>
-					     <filter>
-						<q:equal>
-						   <q:path>attributes/cn</q:path>
-						   <q:value>jira-admins</q:value>
-						</q:equal>
-					     </filter>
-					     <searchOnResource>true</searchOnResource>
-					  </associationTargetSearch>
-				       </expression>
-				    </outbound>
-				 </association>
+					<ref>ri:ldapGroup</ref>
+					<outbound>
+						<expression>
+							<associationTargetSearch>
+								<filter>
+									<q:equal>
+										<q:path>attributes/cn</q:path>
+										<q:value>jira-admins</q:value>
+									</q:equal>
+								</filter>
+								<searchOnResource>true</searchOnResource>
+							</associationTargetSearch>
+						</expression>
+					</outbound>
+				</association>
 			</construction>
 		</inducement>
 		<requestable>true</requestable>
-		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" /> <!-- semancik -->
+		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" />
+		<!-- semancik -->
 		<roleType>application</roleType>
 	</role>
 
@@ -124,31 +111,33 @@
 		</assignment>
 		<inducement>
 			<construction>
-				<resourceRef oid="28b699cc-107c-11e6-8277-034841879377"/> <!-- LDAP resource -->
+				<resourceRef oid="28b699cc-107c-11e6-8277-034841879377"/>
+				<!-- LDAP resource -->
 				<kind>account</kind>
 				<association>
-				    <ref>ri:ldapGroup</ref>
-				    <outbound>
-				       <expression>
-					  <associationTargetSearch>
-					     <filter>
-						<q:equal>
-						   <q:path>attributes/cn</q:path>
-						   <q:value>jira-developers</q:value>
-						</q:equal>
-					     </filter>
-					     <searchOnResource>true</searchOnResource>
-					  </associationTargetSearch>
-				       </expression>
-				    </outbound>
-				 </association>
+					<ref>ri:ldapGroup</ref>
+					<outbound>
+						<expression>
+							<associationTargetSearch>
+								<filter>
+									<q:equal>
+										<q:path>attributes/cn</q:path>
+										<q:value>jira-developers</q:value>
+									</q:equal>
+								</filter>
+								<searchOnResource>true</searchOnResource>
+							</associationTargetSearch>
+						</expression>
+					</outbound>
+				</association>
 			</construction>
 		</inducement>
 		<requestable>true</requestable>
-		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" /> <!-- semancik -->
+		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" />
+		<!-- semancik -->
 		<roleType>application</roleType>
 	</role>
-	
+
 	<role oid="41216dda-8f0b-11e6-a17a-1f07efaf95c2">
 		<name>Jira Auditor</name>
 		<parentOrgRef oid="00000000-ee88-6666-0000-c00000001000" type="c:OrgType"/>
@@ -157,30 +146,31 @@
 		</assignment>
 		<inducement>
 			<construction>
-				<resourceRef oid="28b699cc-107c-11e6-8277-034841879377"/> <!-- LDAP resource -->
+				<resourceRef oid="28b699cc-107c-11e6-8277-034841879377"/>
+				<!-- LDAP resource -->
 				<kind>account</kind>
 				<association>
-				    <ref>ri:ldapGroup</ref>
-				    <outbound>
-				       <expression>
-					  <associationTargetSearch>
-					     <filter>
-						<q:equal>
-						   <q:path>attributes/cn</q:path>
-						   <q:value>jira-auditors</q:value>
-						</q:equal>
-					     </filter>
-					     <searchOnResource>true</searchOnResource>
-					  </associationTargetSearch>
-				       </expression>
-				    </outbound>
-				 </association>
+					<ref>ri:ldapGroup</ref>
+					<outbound>
+						<expression>
+							<associationTargetSearch>
+								<filter>
+									<q:equal>
+										<q:path>attributes/cn</q:path>
+										<q:value>jira-auditors</q:value>
+									</q:equal>
+								</filter>
+								<searchOnResource>true</searchOnResource>
+							</associationTargetSearch>
+						</expression>
+					</outbound>
+				</association>
 			</construction>
 		</inducement>
 		<requestable>false</requestable>
 		<roleType>application</roleType>
 	</role>
-	
+
 	<org oid="00000000-ee88-6666-0000-c00000002000">
 		<name>R2000</name>
 		<description>Confluence Wiki</description>
@@ -199,7 +189,8 @@
 			<targetRef oid="00000000-ee88-6666-0000-c00000002000" type="c:OrgType"/>
 		</assignment>
 		<requestable>true</requestable>
-		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" /> <!-- semancik -->
+		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" />
+		<!-- semancik -->
 		<roleType>application</roleType>
 	</role>
 
@@ -214,10 +205,11 @@
 			<targetRef oid="00000000-ee88-6666-0000-c0000000a000" type="c:OrgType"/>
 		</assignment>
 		<requestable>true</requestable>
-		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" /> <!-- semancik -->
+		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" />
+		<!-- semancik -->
 		<roleType>application</roleType>
 	</role>
-	
+
 	<role oid="c6c0356a-8f0c-11e6-baa3-c3ac3a73faff">
 		<name>Confluence Writer</name>
 		<parentOrgRef oid="00000000-ee88-6666-0000-c00000002000" type="c:OrgType"/>
@@ -225,10 +217,11 @@
 			<targetRef oid="00000000-ee88-6666-0000-c00000002000" type="c:OrgType"/>
 		</assignment>
 		<requestable>true</requestable>
-		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" /> <!-- semancik -->
+		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" />
+		<!-- semancik -->
 		<roleType>application</roleType>
 	</role>
-	
+
 	<role oid="98248d38-8f0b-11e6-bbd8-4b23f6af805a">
 		<name>Confluence Auditor</name>
 		<parentOrgRef oid="00000000-ee88-6666-0000-c00000002000" type="c:OrgType"/>
@@ -248,7 +241,7 @@
 		<displayName>Gizmo</displayName>
 		<orgType>application</orgType>
 	</org>
-	
+
 	<role oid="d9c30cec-8f0b-11e6-8e75-7329ce9b2d33">
 		<name>Gizmo Administrator</name>
 		<parentOrgRef oid="00000000-ee88-6666-0000-c00000003000" type="c:OrgType"/>
@@ -256,7 +249,8 @@
 			<targetRef oid="00000000-ee88-6666-0000-c00000003000" type="c:OrgType"/>
 		</assignment>
 		<requestable>true</requestable>
-		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" /> <!-- semancik -->
+		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" />
+		<!-- semancik -->
 		<roleType>application</roleType>
 	</role>
 
@@ -267,7 +261,8 @@
 			<targetRef oid="00000000-ee88-6666-0000-c00000003000" type="c:OrgType"/>
 		</assignment>
 		<requestable>true</requestable>
-		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" /> <!-- semancik -->
+		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" />
+		<!-- semancik -->
 		<roleType>application</roleType>
 	</role>
 
@@ -288,7 +283,8 @@
 			<targetRef oid="00000000-ee88-6666-0000-c00000003000" type="c:OrgType"/>
 		</assignment>
 		<requestable>true</requestable>
-		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" /> <!-- semancik -->
+		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" />
+		<!-- semancik -->
 		<roleType>application</roleType>
 	</role>
 
@@ -299,10 +295,11 @@
 			<targetRef oid="00000000-ee88-6666-0000-c00000003000" type="c:OrgType"/>
 		</assignment>
 		<requestable>true</requestable>
-		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" /> <!-- semancik -->
+		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" />
+		<!-- semancik -->
 		<roleType>application</roleType>
 	</role>
-	
+
 	<role oid="1c597ce4-8f0c-11e6-ab44-0bea62bd6eb3">
 		<name>Gizmo Poweruser</name>
 		<parentOrgRef oid="00000000-ee88-6666-0000-c00000003000" type="c:OrgType"/>
@@ -320,10 +317,11 @@
 			<targetRef oid="00000000-ee88-6666-0000-c00000003000" type="c:OrgType"/>
 		</assignment>
 		<requestable>true</requestable>
-		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" /> <!-- semancik -->
+		<approverRef oid="00000000-ee88-6666-0000-000000000002" type="UserType" />
+		<!-- semancik -->
 		<roleType>application</roleType>
 	</role>
-	
+
 	<role oid="49aae386-8f0c-11e6-a9b0-9f0004f7f9bc">
 		<name>Gizmo Whatever</name>
 		<parentOrgRef oid="00000000-ee88-6666-0000-c00000003000" type="c:OrgType"/>
@@ -351,7 +349,7 @@
 		<requestable>true</requestable>
 		<roleType>application</roleType>
 	</role>
-	
+
 	<role oid="83894804-8f0c-11e6-a035-13fd9f7bbd3b">
 		<name>Gizmo role with longer name</name>
 		<parentOrgRef oid="00000000-ee88-6666-0000-c00000003000" type="c:OrgType"/>
@@ -379,5 +377,5 @@
 		<requestable>true</requestable>
 		<roleType>application</roleType>
 	</role>
-	
+
 </objects>

@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ Copyright (c) 2017 Evolveum
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~     http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
- 
 <objects xmlns='http://midpoint.evolveum.com/xml/ns/public/common/common-3'
          xmlns:c='http://midpoint.evolveum.com/xml/ns/public/common/common-3'
          xmlns:t='http://prism.evolveum.com/xml/ns/public/types-3'
          xmlns:org='http://midpoint.evolveum.com/xml/ns/public/common/org-3'>
 
-
 	<role oid="8471b89a-0802-11e7-971d-7728366eba21">
-		<name>Manager</name>
+		<name>Eve Manager</name>
 		<description>Role for organizational unit managers. Allows delegated administration.</description>
 		<inducement>
 			<targetRef oid="00000000-0000-0000-0000-00000000000a" type="RoleType"/> <!-- Approver -->
@@ -75,7 +58,7 @@
 	<!-- Functional organizational structure -->
 
 	<role oid="c4adde6c-0801-11e7-b753-9bcb76b1ab64">
-		<name>Functional Org Metarole</name>
+		<name>Eve Functional Org Metarole (created in org-users.xml)</name>
 		<description>Metarole that defines common behavior of all functional organotional units</description>
 		<inducement>
 			<targetRef oid="00000000-0000-0000-0000-00000000000a" type="c:RoleType"/> <!-- Approver -->

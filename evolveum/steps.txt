@@ -1,3 +1,5 @@
+https://wiki.evolveum.com/display/midPoint/Evolveum+Demo+Sample
+
 1. import metarole:
     role-meta-functional.xml
     role-meta-project.xml
@@ -5,3 +7,19 @@
 2. Import object templates
     object-template-org.xml
     object-template-user.xml
+
+3. Import value policy: value-policy-nonce.xml
+
+4. Import security policy: security-policy.xml
+
+5. In the System Configuration，specify User and Org template. Or use the system-configuration.xml
+
+6. Import roles: roles.xml
+
+7. Import org-users.xml
+
+
+4. Import role catalog: role-catalog.xml
+
+set up role catalog
+https://wiki.evolveum.com/display/midPoint/Role+Catalog+Configuration

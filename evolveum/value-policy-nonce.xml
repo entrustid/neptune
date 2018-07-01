@@ -15,9 +15,9 @@
   ~ limitations under the License.
   -->
 
-<valuePolicy oid="ffa65cbc-6088-11e7-b434-db222509f488"
-             xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3">
-	<name>Nonce Value Policy</name>
+<valuePolicy oid="ffa65cbc-6088-11e7-b434-db222509f488" 
+	xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3">
+	<name>Eve Nonce Value Policy</name>
 	<description>Value policy for mail-based password reset nonce</description>
 	<stringPolicy>
 		<limitations>

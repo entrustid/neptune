@@ -17,7 +17,7 @@
 
 <securityPolicy oid="b50aff7e-3784-11e6-b97e-0b955775c407" 
 	xmlns='http://midpoint.evolveum.com/xml/ns/public/common/common-3'>
-	<name>Evolveum Security Policy</name>
+	<name>Eve Security Policy</name>
 	<authentication>
 		<mailAuthentication>
 			<name>confirmationLink</name>
@@ -33,7 +33,7 @@
 		<nonce>
 			<maxAge>PT2M</maxAge>
 			<name>mailNonce</name>
-			<valuePolicyRef oid="ffa65cbc-6088-11e7-b434-db222509f488" type="ValuePolicyType"><!-- Mail Nonce Policy --></valuePolicyRef>
+			<valuePolicyRef oid="ffa65cbc-6088-11e7-b434-db222509f488" type="ValuePolicyType">				<!-- Mail Nonce Policy --></valuePolicyRef>
 		</nonce>
 		<securityQuestions>
 			<resetMethod>
