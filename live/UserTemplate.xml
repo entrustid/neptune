@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+	xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+	xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3">
+	<objectTemplate xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
+                xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3"
+                xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3"
+                xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"
+                xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
+                oid="84769304-7776-11e2-b582-001e8c717e5b"
+                version="24">
+   <name>Default User Template</name>
+   <metadata>
+      <createTimestamp>2018-06-26T14:56:27.334+02:00</createTimestamp>
+      <creatorRef oid="00000000-0000-0000-0000-000000000002"
+                  relation="org:default"
+                  type="c:UserType"><!-- administrator --></creatorRef>
+      <createChannel>http://midpoint.evolveum.com/xml/ns/public/model/channels-3#objectImport</createChannel>
+   </metadata>
+   <item id="1">
+      <c:ref>subtype</c:ref>
+      <valueEnumerationRef xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                           oid="5783c174-d141-11e4-bb29-001e8c717e5b"
+                           relation="org:default"
+                           type="tns:LookupTableType"><!-- Emp type --></valueEnumerationRef>
+   </item>
+   <mapping id="2">
+      <description>A hack to avoid feedback to HR feed - deleting accounts because they are not assigned</description>
+      <source>
+         <c:path>subtype</c:path>
+      </source>
+      <expression>
+         <value>
+            <construction>
+               <resourceRef oid="8844dcca-775d-11e2-a0ac-001e8c717e5b" type="c:ResourceType"/>
+            </construction>
+         </value>
+      </expression>
+      <target>
+         <c:path>assignment</c:path>
+      </target>
+      <condition>
+         <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:type="c:ScriptExpressionEvaluatorType">
+            <code>subtype != null</code>
+         </script>
+      </condition>
+   </mapping>
+   <mapping id="3">
+      <source>
+         <c:path>subtype</c:path>
+      </source>
+      <expression>
+         <value>
+            <targetRef oid="abf3884a-7778-11e2-abb7-001e8c717e5b" type="c:RoleType"/>
+         </value>
+      </expression>
+      <target>
+         <c:path>assignment</c:path>
+      </target>
+      <condition>
+         <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:type="c:ScriptExpressionEvaluatorType">
+            <code>subtype == 'FTE'</code>
+         </script>
+      </condition>
+   </mapping>
+   <mapping id="4">
+      <source>
+         <c:path>subtype</c:path>
+      </source>
+      <expression>
+         <value>
+            <targetRef oid="8d62985c-7797-11e2-94a6-001e8c717e5b" type="c:RoleType"/>
+         </value>
+      </expression>
+      <target>
+         <c:path>assignment</c:path>
+      </target>
+      <condition>
+         <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:type="c:ScriptExpressionEvaluatorType">
+            <code>subtype == 'CONTRACTOR'</code>
+         </script>
+      </condition>
+   </mapping>
+   <mapping id="5">
+      <strength>strong</strength>
+      <source>
+         <c:path>$user/givenName</c:path>
+      </source>
+      <source>
+         <c:path>$user/familyName</c:path>
+      </source>
+      <expression>
+         <script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:type="c:ScriptExpressionEvaluatorType">
+            <code>(givenName == null ? '' : givenName) + ' ' + (familyName == null ? '' : familyName)</code>
+         </script>
+      </expression>
+      <target>
+         <c:path>fullName</c:path>
+      </target>
+   </mapping>
+</objectTemplate>
+</objects>

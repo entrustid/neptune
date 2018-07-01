@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+	xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+	xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3">
+	<resource xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+          xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
+          xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+          xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3"
+          xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3"
+          xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"
+          xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
+          oid="8844dcca-775d-11e2-a0ac-001e8c717e5b"
+          version="38">
+   <name>HR Feed</name>
+   <fetchResult>
+      <operation>com.evolveum.midpoint.provisioning.api.ProvisioningService.getObject</operation>
+      <status>success</status>
+      <params>
+         <entry key="oid">
+            <paramValue>8844dcca-775d-11e2-a0ac-001e8c717e5b</paramValue>
+         </entry>
+         <entry key="type">
+            <unknownJavaObject>
+               <class>java.lang.Class</class>
+               <toString>class com.evolveum.midpoint.xml.ns._public.common.common_3.ResourceType</toString>
+            </unknownJavaObject>
+         </entry>
+         <entry key="options"/>
+      </params>
+      <context>
+         <entry key="implementationClass">
+            <unknownJavaObject>
+               <class>java.lang.Class</class>
+               <toString>class com.evolveum.midpoint.provisioning.impl.ProvisioningServiceImpl</toString>
+            </unknownJavaObject>
+         </entry>
+      </context>
+      <token>1000000000000140889</token>
+      <partialResults>
+         <operation>com.evolveum.midpoint.repo.api.RepositoryService.getVersion</operation>
+         <status>success</status>
+         <params>
+            <entry key="oid">
+               <paramValue>8844dcca-775d-11e2-a0ac-001e8c717e5b</paramValue>
+            </entry>
+            <entry key="type">
+               <paramValue>com.evolveum.midpoint.xml.ns._public.common.common_3.ResourceType</paramValue>
+            </entry>
+         </params>
+         <token>1000000000000140890</token>
+      </partialResults>
+   </fetchResult>
+   <metadata>
+      <createTimestamp>2018-06-26T14:59:42.845+02:00</createTimestamp>
+      <creatorRef oid="00000000-0000-0000-0000-000000000002"
+                  relation="org:default"
+                  type="c:UserType"><!-- administrator --></creatorRef>
+      <createChannel>http://midpoint.evolveum.com/xml/ns/public/model/channels-3#objectImport</createChannel>
+   </metadata>
+   <operationExecution id="1">
+      <timestamp>2017-07-17T15:49:53.377+02:00</timestamp>
+      <operation>
+         <objectDelta>
+            <t:changeType>modify</t:changeType>
+            <t:objectType>c:ResourceType</t:objectType>
+         </objectDelta>
+         <executionResult>
+            <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+            <status>success</status>
+            <token>1000000000000001912</token>
+         </executionResult>
+         <objectName>HR Feed</objectName>
+      </operation>
+      <status>success</status>
+      <initiatorRef oid="00000000-0000-0000-0000-000000000002"
+                    relation="org:default"
+                    type="c:UserType"><!-- administrator --></initiatorRef>
+      <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+   </operationExecution>
+   <operationExecution id="2">
+      <timestamp>2017-07-17T15:50:20.975+02:00</timestamp>
+      <operation>
+         <objectDelta>
+            <t:changeType>modify</t:changeType>
+            <t:objectType>c:ResourceType</t:objectType>
+         </objectDelta>
+         <executionResult>
+            <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+            <status>success</status>
+            <token>1000000000000002077</token>
+         </executionResult>
+         <objectName>HR Feed</objectName>
+      </operation>
+      <status>success</status>
+      <initiatorRef oid="00000000-0000-0000-0000-000000000002"
+                    relation="org:default"
+                    type="c:UserType"><!-- administrator --></initiatorRef>
+      <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+   </operationExecution>
+   <operationExecution id="3">
+      <timestamp>2017-07-28T15:39:57.958+02:00</timestamp>
+      <operation>
+         <objectDelta>
+            <t:changeType>modify</t:changeType>
+            <t:objectType>c:ResourceType</t:objectType>
+         </objectDelta>
+         <executionResult>
+            <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+            <status>success</status>
+            <token>1000000000000007989</token>
+         </executionResult>
+         <objectName>HR Feed</objectName>
+      </operation>
+      <status>success</status>
+      <initiatorRef oid="00000000-0000-0000-0000-000000000002"
+                    relation="org:default"
+                    type="c:UserType"><!-- administrator --></initiatorRef>
+      <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+   </operationExecution>
+   <operationalState>
+      <lastAvailabilityStatus>up</lastAvailabilityStatus>
+   </operationalState>
+   <connectorRef oid="031ace52-96e6-470c-829b-badda84c1880"
+                 relation="org:default"
+                 type="c:ConnectorType"><!-- ConnId com.evolveum.polygon.connector.csv.CsvConnector v2.2 --></connectorRef>
+   <connectorConfiguration xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xsi:type="c:ConnectorConfigurationType">
+      <icfc:configurationProperties xmlns:gen237="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-csv/com.evolveum.polygon.connector.csv.CsvConnector"
+                                    xsi:type="icfc:ConfigurationPropertiesType">
+         <gen237:multivalueDelimiter>;</gen237:multivalueDelimiter>
+         <gen237:fieldDelimiter>,</gen237:fieldDelimiter>
+         <gen237:filePath>/var/opt/hr/export.csv</gen237:filePath>
+         <gen237:encoding>utf-8</gen237:encoding>
+         <gen237:nameAttribute>empnum</gen237:nameAttribute>
+         <gen237:uniqueAttribute>empnum</gen237:uniqueAttribute>
+      </icfc:configurationProperties>
+   </connectorConfiguration>
+   <schema>
+      <cachingMetadata>
+         <retrievalTimestamp>2017-07-28T15:39:58.336+02:00</retrievalTimestamp>
+         <serialNumber>961b8dd20eb3a244-f3e57bc1bf6f35a4</serialNumber>
+      </cachingMetadata>
+      <definition>
+         <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                     xmlns:a="http://prism.evolveum.com/xml/ns/public/annotation-3"
+                     xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
+                     xmlns:ra="http://midpoint.evolveum.com/xml/ns/public/resource/annotation-3"
+                     elementFormDefault="qualified"
+                     targetNamespace="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">
+            <xsd:import namespace="http://prism.evolveum.com/xml/ns/public/annotation-3"/>
+            <xsd:import namespace="http://midpoint.evolveum.com/xml/ns/public/resource/annotation-3"/>
+            <xsd:complexType name="AccountObjectClass">
+               <xsd:annotation>
+                  <xsd:appinfo>
+                     <ra:resourceObject/>
+                     <ra:identifier>ri:empnum</ra:identifier>
+                     <ra:displayNameAttribute>ri:empnum</ra:displayNameAttribute>
+                     <ra:namingAttribute>ri:empnum</ra:namingAttribute>
+                     <ra:nativeObjectClass>__ACCOUNT__</ra:nativeObjectClass>
+                     <ra:kind>account</ra:kind>
+                     <ra:default>true</ra:default>
+                  </xsd:appinfo>
+               </xsd:annotation>
+               <xsd:sequence>
+                  <xsd:element minOccurs="0" name="emptype" type="xsd:string">
+                     <xsd:annotation>
+                        <xsd:appinfo>
+                           <a:displayOrder>120</a:displayOrder>
+                           <ra:nativeAttributeName>emptype</ra:nativeAttributeName>
+                           <ra:frameworkAttributeName>emptype</ra:frameworkAttributeName>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="lastname" type="xsd:string">
+                     <xsd:annotation>
+                        <xsd:appinfo>
+                           <a:displayOrder>130</a:displayOrder>
+                           <ra:nativeAttributeName>lastname</ra:nativeAttributeName>
+                           <ra:frameworkAttributeName>lastname</ra:frameworkAttributeName>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="artname" type="xsd:string">
+                     <xsd:annotation>
+                        <xsd:appinfo>
+                           <a:displayOrder>140</a:displayOrder>
+                           <ra:nativeAttributeName>artname</ra:nativeAttributeName>
+                           <ra:frameworkAttributeName>artname</ra:frameworkAttributeName>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="firstname" type="xsd:string">
+                     <xsd:annotation>
+                        <xsd:appinfo>
+                           <a:displayOrder>150</a:displayOrder>
+                           <ra:nativeAttributeName>firstname</ra:nativeAttributeName>
+                           <ra:frameworkAttributeName>firstname</ra:frameworkAttributeName>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="empnum" type="xsd:string">
+                     <xsd:annotation>
+                        <xsd:appinfo>
+                           <a:displayOrder>100</a:displayOrder>
+                           <ra:nativeAttributeName>empnum</ra:nativeAttributeName>
+                           <ra:frameworkAttributeName>__NAME__</ra:frameworkAttributeName>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:schema>
+      </definition>
+   </schema>
+   <schemaHandling>
+      <objectType id="4">
+         <intent>default</intent>
+         <displayName>Default Account</displayName>
+         <default>true</default>
+         <objectClass>ri:AccountObjectClass</objectClass>
+         <attribute id="5">
+            <c:ref>ri:empnum</c:ref>
+            <displayName>Employee#</displayName>
+            <limitations>
+               <minOccurs>0</minOccurs>
+            </limitations>
+            <inbound id="10">
+               <target>
+                  <c:path>$user/employeeNumber</c:path>
+               </target>
+            </inbound>
+         </attribute>
+         <attribute id="6">
+            <c:ref>ri:firstname</c:ref>
+            <displayName>First Name</displayName>
+            <description>Definition of Firstname attribute handling.</description>
+            <inbound id="11">
+               <target>
+                  <c:path>$user/givenName</c:path>
+               </target>
+            </inbound>
+         </attribute>
+         <attribute id="7">
+            <c:ref>ri:lastname</c:ref>
+            <displayName>Last name</displayName>
+            <inbound id="12">
+               <target>
+                  <c:path>$user/familyName</c:path>
+               </target>
+            </inbound>
+         </attribute>
+         <attribute id="8">
+            <c:ref>ri:artname</c:ref>
+            <displayName>Artistic name</displayName>
+            <inbound id="13">
+               <target>
+                  <c:path xmlns:ext="http://prism.evolveum.com/xml/ns/demo/extension-electra">$user/extension/ext:artisticName</c:path>
+               </target>
+            </inbound>
+            <inbound id="14">
+               <strength>weak</strength>
+               <target>
+                  <c:path>$user/nickName</c:path>
+               </target>
+            </inbound>
+            <inbound id="15">
+               <strength>weak</strength>
+               <target>
+                  <c:path>$user/name</c:path>
+               </target>
+            </inbound>
+         </attribute>
+         <attribute id="9">
+            <c:ref>ri:emptype</c:ref>
+            <displayName>Employee type</displayName>
+            <inbound id="16">
+               <target>
+                  <c:path>$user/subtype</c:path>
+               </target>
+            </inbound>
+         </attribute>
+         <activation>
+            <administrativeStatus>
+               <inbound id="17">
+                  <strength>weak</strength>
+                  <expression>
+                     <value>enabled</value>
+                  </expression>
+               </inbound>
+            </administrativeStatus>
+         </activation>
+         <credentials>
+            <password xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:type="c:ResourcePasswordDefinitionType">
+               <inbound>
+                  <strength>weak</strength>
+                  <expression>
+                     <generate xsi:type="c:GenerateExpressionEvaluatorType"/>
+                  </expression>
+               </inbound>
+            </password>
+         </credentials>
+      </objectType>
+   </schemaHandling>
+   <capabilities>
+      <cachingMetadata>
+         <retrievalTimestamp>2017-07-28T15:39:58.249+02:00</retrievalTimestamp>
+         <serialNumber>1536feb8410ede0f-1b946fced3360f09</serialNumber>
+      </cachingMetadata>
+      <native xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:type="c:CapabilityCollectionType">
+         <cap:schema/>
+         <cap:liveSync/>
+         <cap:testConnection/>
+         <cap:create/>
+         <cap:read/>
+         <cap:update/>
+         <cap:delete/>
+         <cap:script>
+            <cap:host>
+               <cap:type>connector</cap:type>
+            </cap:host>
+         </cap:script>
+         <cap:addRemoveAttributeValues/>
+      </native>
+   </capabilities>
+   <synchronization>
+      <objectSynchronization>
+         <enabled>true</enabled>
+         <correlation>
+            <q:description>
+	                    Correlation expression is a search query.
+	                    Following search queury will look for users that have "name"
+	                    equal to the "name" attribute of the account. Simply speaking,
+	                    it will look for match in usernames in the IDM and the resource.
+	                    The correlation rule always looks for users, so it will not match
+	                    any other object type.
+	                </q:description>
+            <q:equal>
+               <q:path>c:employeeNumber</q:path>
+               <expression>
+                  <path>$c:account/c:attributes/ri:empnum</path>
+               </expression>
+            </q:equal>
+         </correlation>
+         <reaction>
+            <situation>linked</situation>
+            <action ref="http://midpoint.evolveum.com/xml/ns/public/model/action-3#modifyUser"/>
+         </reaction>
+         <reaction>
+            <situation>deleted</situation>
+            <action ref="http://midpoint.evolveum.com/xml/ns/public/model/action-3#deleteUser"/>
+         </reaction>
+         <reaction>
+            <situation>unlinked</situation>
+            <action ref="http://midpoint.evolveum.com/xml/ns/public/model/action-3#linkAccount"/>
+         </reaction>
+         <reaction>
+            <situation>unmatched</situation>
+            <action ref="http://midpoint.evolveum.com/xml/ns/public/model/action-3#addUser"/>
+         </reaction>
+      </objectSynchronization>
+   </synchronization>
+</resource>
+</objects>

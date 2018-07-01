@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+	xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+	xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3">
+	<task xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+      xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
+      xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+      xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3"
+      xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3"
+      xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"
+      xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
+      oid="a6fcbf14-775f-11e2-ad7f-001e8c717e5b"
+      version="991948">
+   <name>Live Sync: HR Feed</name>
+   <description>Definition of a live synchronization task. It will poll changelog and pull in changes</description>
+   <extension xmlns:gen462="http://midpoint.evolveum.com/xml/ns/public/provisioning/liveSync-3.xsd"
+              xmlns:mext="http://midpoint.evolveum.com/xml/ns/public/model/extension-3"
+              xmlns:gen617="http://midpoint.evolveum.com/xml/ns/public/provisioning/liveSync-3"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:type="c:ExtensionType">
+      <mext:kind>account</mext:kind>
+      <gen462:token xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">1450517924000</gen462:token>
+      <mext:retryLiveSyncErrors>true</mext:retryLiveSyncErrors>
+      <gen617:token xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">1530435825473</gen617:token>
+   </extension>
+   <metadata>
+      <createTimestamp>2015-02-20T08:40:54.718+01:00</createTimestamp>
+      <creatorRef oid="00000000-0000-0000-0000-000000000002"
+                  relation="org:default"
+                  type="c:UserType"><!-- administrator --></creatorRef>
+      <createChannel>http://midpoint.evolveum.com/xml/ns/public/model/channels-3#objectImport</createChannel>
+      <modifyTimestamp>2017-07-29T19:56:31.449+02:00</modifyTimestamp>
+      <modifierRef xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+                   oid="00000000-0000-0000-0000-000000000002"
+                   relation="org:default"
+                   type="tns:UserType"><!-- administrator --></modifierRef>
+      <modifyChannel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</modifyChannel>
+   </metadata>
+   <operationExecution id="3">
+      <timestamp>2017-07-18T14:07:36.221+02:00</timestamp>
+      <operation>
+         <objectDelta>
+            <t:changeType>modify</t:changeType>
+            <t:objectType>c:TaskType</t:objectType>
+         </objectDelta>
+         <executionResult>
+            <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+            <status>success</status>
+            <token>1000000000000019530</token>
+         </executionResult>
+         <objectName>Live Sync: HR Feed</objectName>
+      </operation>
+      <status>success</status>
+      <initiatorRef oid="00000000-0000-0000-0000-000000000002"
+                    relation="org:default"
+                    type="c:UserType"><!-- administrator --></initiatorRef>
+      <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+   </operationExecution>
+   <operationExecution id="4">
+      <timestamp>2017-07-18T14:07:43.148+02:00</timestamp>
+      <operation>
+         <objectDelta>
+            <t:changeType>modify</t:changeType>
+            <t:objectType>c:TaskType</t:objectType>
+         </objectDelta>
+         <executionResult>
+            <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+            <status>success</status>
+            <token>1000000000000019790</token>
+         </executionResult>
+         <objectName>Live Sync: HR Feed</objectName>
+      </operation>
+      <status>success</status>
+      <initiatorRef oid="00000000-0000-0000-0000-000000000002"
+                    relation="org:default"
+                    type="c:UserType"><!-- administrator --></initiatorRef>
+      <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+   </operationExecution>
+   <operationExecution id="5">
+      <timestamp>2017-07-19T14:21:32.829+02:00</timestamp>
+      <operation>
+         <objectDelta>
+            <t:changeType>modify</t:changeType>
+            <t:objectType>c:TaskType</t:objectType>
+         </objectDelta>
+         <executionResult>
+            <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+            <status>success</status>
+            <token>1000000000000047771</token>
+         </executionResult>
+         <objectName>Live Sync: HR Feed</objectName>
+      </operation>
+      <status>success</status>
+      <initiatorRef oid="00000000-0000-0000-0000-000000000002"
+                    relation="org:default"
+                    type="c:UserType"><!-- administrator --></initiatorRef>
+      <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+   </operationExecution>
+   <operationExecution id="1">
+      <timestamp>2017-07-19T14:23:33.945+02:00</timestamp>
+      <operation>
+         <objectDelta>
+            <t:changeType>modify</t:changeType>
+            <t:objectType>c:TaskType</t:objectType>
+         </objectDelta>
+         <executionResult>
+            <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+            <status>success</status>
+            <token>1000000000000052321</token>
+         </executionResult>
+         <objectName>Live Sync: HR Feed</objectName>
+      </operation>
+      <status>success</status>
+      <initiatorRef oid="00000000-0000-0000-0000-000000000002"
+                    relation="org:default"
+                    type="c:UserType"><!-- administrator --></initiatorRef>
+      <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+   </operationExecution>
+   <operationExecution id="2">
+      <timestamp>2017-07-29T19:56:32.256+02:00</timestamp>
+      <operation>
+         <objectDelta>
+            <t:changeType>modify</t:changeType>
+            <t:objectType>c:TaskType</t:objectType>
+         </objectDelta>
+         <executionResult>
+            <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+            <status>success</status>
+            <token>1000000000000001308</token>
+         </executionResult>
+         <objectName>Live Sync: HR Feed</objectName>
+      </operation>
+      <status>success</status>
+      <initiatorRef oid="00000000-0000-0000-0000-000000000002"
+                    relation="org:default"
+                    type="c:UserType"><!-- administrator --></initiatorRef>
+      <channel>http://midpoint.evolveum.com/xml/ns/public/gui/channels-3#user</channel>
+   </operationExecution>
+   <taskIdentifier>91919191-76e0-59e2-8888-3d4f02d3ffff</taskIdentifier>
+   <ownerRef xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+             oid="00000000-0000-0000-0000-000000000002"
+             relation="org:default"
+             type="tns:UserType"><!-- administrator --></ownerRef>
+   <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+   <executionStatus>runnable</executionStatus>
+   <category>LiveSynchronization</category>
+   <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/synchronization/task/live-sync/handler-3</handlerUri>
+   <result>
+      <operation>com.evolveum.midpoint.common.operation.liveSync</operation>
+      <status>success</status>
+      <token>1000000000000128491</token>
+      <partialResults>
+         <operation>com.evolveum.midpoint.provisioning.api.ProvisioningService.synchronize</operation>
+         <status>success</status>
+         <params>
+            <entry key="task">
+               <paramValue>Task(id:91919191-76e0-59e2-8888-3d4f02d3ffff, name:Live Sync: HR Feed, oid:a6fcbf14-775f-11e2-ad7f-001e8c717e5b)</paramValue>
+            </entry>
+            <entry key="oid">
+               <paramValue>8844dcca-775d-11e2-a0ac-001e8c717e5b</paramValue>
+            </entry>
+         </params>
+         <token>1000000000000128492</token>
+         <partialResults>
+            <operation>com.evolveum.midpoint.provisioning.ucf.api.ConnectorInstance.fetchChanges</operation>
+            <status>success</status>
+            <params>
+               <entry key="lastToken">
+                  <paramValue>PP({.../provisioning/liveSync-3}token):[PPV(String:1530435819773)]</paramValue>
+               </entry>
+            </params>
+            <context>
+               <entry key="objectClass">
+                  <paramValue>crOCD ({http://midpoint.evolveum.com/xml/ns/public/resource/instance-3}AccountObjectClass)</paramValue>
+               </entry>
+            </context>
+            <returns>
+               <entry key="count">
+                  <paramValue>1</paramValue>
+               </entry>
+            </returns>
+            <token>1000000000000128493</token>
+            <partialResults>
+               <operation>org.identityconnectors.framework.api.ConnectorFacade.sync</operation>
+               <status>success</status>
+               <params>
+                  <entry key="connIdObjectClass">
+                     <paramValue>ObjectClass: __ACCOUNT__</paramValue>
+                  </entry>
+                  <entry key="syncToken">
+                     <paramValue>SyncToken: 1530435819773</paramValue>
+                  </entry>
+                  <entry key="syncHandler">
+                     <paramValue>com.evolveum.midpoint.provisioning.ucf.impl.connid.ConnectorInstanceConnIdImpl$1@de8613</paramValue>
+                  </entry>
+               </params>
+               <context>
+                  <entry key="connector">
+                     <paramValue>class org.identityconnectors.framework.impl.api.local.LocalConnectorFacadeImpl</paramValue>
+                  </entry>
+               </context>
+               <returns>
+                  <entry key="count">
+                     <paramValue>0</paramValue>
+                  </entry>
+               </returns>
+               <token>1000000000000128494</token>
+            </partialResults>
+         </partialResults>
+         <partialResults>
+            <operation>com.evolveum.midpoint.repo.api.RepositoryService.modifyObject</operation>
+            <status>success</status>
+            <params>
+               <entry key="oid">
+                  <paramValue>a6fcbf14-775f-11e2-ad7f-001e8c717e5b</paramValue>
+               </entry>
+               <entry key="type">
+                  <paramValue>com.evolveum.midpoint.xml.ns._public.common.common_3.TaskType</paramValue>
+               </entry>
+               <entry key="modifications">
+                  <paramValue>PropertyDelta(extension / {.../provisioning/liveSync-3}token, REPLACE)</paramValue>
+               </entry>
+            </params>
+            <token>1000000000000128495</token>
+         </partialResults>
+      </partialResults>
+      <partialResults>
+         <operation>com.evolveum.midpoint.common.operation.liveSync.statistics</operation>
+         <status>success</status>
+         <token>1000000000000128496</token>
+         <message>Changes processed: 0</message>
+      </partialResults>
+   </result>
+   <resultStatus>success</resultStatus>
+   <objectRef oid="8844dcca-775d-11e2-a0ac-001e8c717e5b"
+              relation="org:default"
+              type="c:ResourceType"><!-- HR Feed --></objectRef>
+   <lastRunStartTimestamp>2018-07-01T11:03:45.431+02:00</lastRunStartTimestamp>
+   <lastRunFinishTimestamp>2018-07-01T11:03:45.519+02:00</lastRunFinishTimestamp>
+   <progress>64</progress>
+   <operationStats>
+      <environmentalPerformanceInformation>
+         <provisioningStatistics>
+            <entry>
+               <resource>HR Feed</resource>
+               <getSuccess>0</getSuccess>
+               <getFailure>0</getFailure>
+               <searchSuccess>0</searchSuccess>
+               <searchFailure>0</searchFailure>
+               <createSuccess>0</createSuccess>
+               <createFailure>0</createFailure>
+               <updateSuccess>0</updateSuccess>
+               <updateFailure>0</updateFailure>
+               <deleteSuccess>0</deleteSuccess>
+               <deleteFailure>0</deleteFailure>
+               <syncSuccess>0</syncSuccess>
+               <syncFailure>2</syncFailure>
+               <scriptSuccess>0</scriptSuccess>
+               <scriptFailure>0</scriptFailure>
+               <otherSuccess>0</otherSuccess>
+               <otherFailure>0</otherFailure>
+               <averageTime>83</averageTime>
+               <minTime>69</minTime>
+               <maxTime>97</maxTime>
+               <totalTime>166</totalTime>
+            </entry>
+            <entry>
+               <resource>HR Feed</resource>
+               <objectClass>ri:AccountObjectClass</objectClass>
+               <getSuccess>14</getSuccess>
+               <getFailure>0</getFailure>
+               <searchSuccess>0</searchSuccess>
+               <searchFailure>0</searchFailure>
+               <createSuccess>0</createSuccess>
+               <createFailure>0</createFailure>
+               <updateSuccess>0</updateSuccess>
+               <updateFailure>0</updateFailure>
+               <deleteSuccess>0</deleteSuccess>
+               <deleteFailure>0</deleteFailure>
+               <syncSuccess>176799</syncSuccess>
+               <syncFailure>161</syncFailure>
+               <scriptSuccess>0</scriptSuccess>
+               <scriptFailure>0</scriptFailure>
+               <otherSuccess>0</otherSuccess>
+               <otherFailure>0</otherFailure>
+               <averageTime>5</averageTime>
+               <minTime>0</minTime>
+               <maxTime>1811</maxTime>
+               <totalTime>908882</totalTime>
+            </entry>
+            <entry>
+               <resource>LDAP Server (OpenDJ) over new LDAPConn.</resource>
+               <objectClass>ri:inetOrgPerson</objectClass>
+               <getSuccess>4</getSuccess>
+               <getFailure>0</getFailure>
+               <searchSuccess>0</searchSuccess>
+               <searchFailure>0</searchFailure>
+               <createSuccess>3</createSuccess>
+               <createFailure>0</createFailure>
+               <updateSuccess>5</updateSuccess>
+               <updateFailure>0</updateFailure>
+               <deleteSuccess>2</deleteSuccess>
+               <deleteFailure>0</deleteFailure>
+               <syncSuccess>0</syncSuccess>
+               <syncFailure>0</syncFailure>
+               <scriptSuccess>0</scriptSuccess>
+               <scriptFailure>0</scriptFailure>
+               <otherSuccess>0</otherSuccess>
+               <otherFailure>0</otherFailure>
+               <averageTime>36</averageTime>
+               <minTime>13</minTime>
+               <maxTime>100</maxTime>
+               <totalTime>516</totalTime>
+            </entry>
+            <entry>
+               <resource>LDAP Server (OpenDJ) over new LDAPConn.</resource>
+               <objectClass>ri:groupOfUniqueNames</objectClass>
+               <getSuccess>3</getSuccess>
+               <getFailure>0</getFailure>
+               <searchSuccess>17</searchSuccess>
+               <searchFailure>0</searchFailure>
+               <createSuccess>0</createSuccess>
+               <createFailure>0</createFailure>
+               <updateSuccess>0</updateSuccess>
+               <updateFailure>0</updateFailure>
+               <deleteSuccess>0</deleteSuccess>
+               <deleteFailure>0</deleteFailure>
+               <syncSuccess>0</syncSuccess>
+               <syncFailure>0</syncFailure>
+               <scriptSuccess>0</scriptSuccess>
+               <scriptFailure>0</scriptFailure>
+               <otherSuccess>0</otherSuccess>
+               <otherFailure>0</otherFailure>
+               <averageTime>19</averageTime>
+               <minTime>0</minTime>
+               <maxTime>37</maxTime>
+               <totalTime>394</totalTime>
+            </entry>
+            <entry>
+               <resource>Addressbook</resource>
+               <objectClass>ri:AccountObjectClass</objectClass>
+               <getSuccess>0</getSuccess>
+               <getFailure>0</getFailure>
+               <searchSuccess>0</searchSuccess>
+               <searchFailure>0</searchFailure>
+               <createSuccess>23</createSuccess>
+               <createFailure>0</createFailure>
+               <updateSuccess>5</updateSuccess>
+               <updateFailure>0</updateFailure>
+               <deleteSuccess>14</deleteSuccess>
+               <deleteFailure>0</deleteFailure>
+               <syncSuccess>0</syncSuccess>
+               <syncFailure>0</syncFailure>
+               <scriptSuccess>0</scriptSuccess>
+               <scriptFailure>0</scriptFailure>
+               <otherSuccess>0</otherSuccess>
+               <otherFailure>0</otherFailure>
+               <averageTime>30</averageTime>
+               <minTime>1</minTime>
+               <maxTime>675</maxTime>
+               <totalTime>1294</totalTime>
+            </entry>
+            <entry>
+               <resource>LDAP Server (OpenDJ) over new LDAPConn.</resource>
+               <objectClass>ri:groupOfNames</objectClass>
+               <getSuccess>0</getSuccess>
+               <getFailure>0</getFailure>
+               <searchSuccess>1</searchSuccess>
+               <searchFailure>0</searchFailure>
+               <createSuccess>0</createSuccess>
+               <createFailure>0</createFailure>
+               <updateSuccess>0</updateSuccess>
+               <updateFailure>0</updateFailure>
+               <deleteSuccess>0</deleteSuccess>
+               <deleteFailure>0</deleteFailure>
+               <syncSuccess>0</syncSuccess>
+               <syncFailure>0</syncFailure>
+               <scriptSuccess>0</scriptSuccess>
+               <scriptFailure>0</scriptFailure>
+               <otherSuccess>0</otherSuccess>
+               <otherFailure>0</otherFailure>
+               <averageTime>16</averageTime>
+               <minTime>0</minTime>
+               <maxTime>16</maxTime>
+               <totalTime>16</totalTime>
+            </entry>
+            <entry>
+               <resource>LDAP Server (OpenLDAP) over new LDAPConn.</resource>
+               <objectClass>ri:inetOrgPerson</objectClass>
+               <getSuccess>3</getSuccess>
+               <getFailure>0</getFailure>
+               <searchSuccess>0</searchSuccess>
+               <searchFailure>0</searchFailure>
+               <createSuccess>20</createSuccess>
+               <createFailure>0</createFailure>
+               <updateSuccess>6</updateSuccess>
+               <updateFailure>0</updateFailure>
+               <deleteSuccess>12</deleteSuccess>
+               <deleteFailure>0</deleteFailure>
+               <syncSuccess>0</syncSuccess>
+               <syncFailure>0</syncFailure>
+               <scriptSuccess>0</scriptSuccess>
+               <scriptFailure>0</scriptFailure>
+               <otherSuccess>0</otherSuccess>
+               <otherFailure>0</otherFailure>
+               <averageTime>19</averageTime>
+               <minTime>3</minTime>
+               <maxTime>99</maxTime>
+               <totalTime>813</totalTime>
+            </entry>
+            <entry>
+               <resource>LDAP Server (OpenLDAP) over new LDAPConn.</resource>
+               <objectClass>ri:groupOfNames</objectClass>
+               <getSuccess>6</getSuccess>
+               <getFailure>0</getFailure>
+               <searchSuccess>58</searchSuccess>
+               <searchFailure>0</searchFailure>
+               <createSuccess>0</createSuccess>
+               <createFailure>0</createFailure>
+               <updateSuccess>26</updateSuccess>
+               <updateFailure>0</updateFailure>
+               <deleteSuccess>0</deleteSuccess>
+               <deleteFailure>0</deleteFailure>
+               <syncSuccess>0</syncSuccess>
+               <syncFailure>0</syncFailure>
+               <scriptSuccess>0</scriptSuccess>
+               <scriptFailure>0</scriptFailure>
+               <otherSuccess>0</otherSuccess>
+               <otherFailure>0</otherFailure>
+               <averageTime>17</averageTime>
+               <minTime>0</minTime>
+               <maxTime>109</maxTime>
+               <totalTime>1547</totalTime>
+            </entry>
+            <entry>
+               <resource>HR Feeed</resource>
+               <objectClass>ri:AccountObjectClass</objectClass>
+               <getSuccess>0</getSuccess>
+               <getFailure>0</getFailure>
+               <searchSuccess>0</searchSuccess>
+               <searchFailure>0</searchFailure>
+               <createSuccess>0</createSuccess>
+               <createFailure>0</createFailure>
+               <updateSuccess>0</updateSuccess>
+               <updateFailure>0</updateFailure>
+               <deleteSuccess>0</deleteSuccess>
+               <deleteFailure>0</deleteFailure>
+               <syncSuccess>2</syncSuccess>
+               <syncFailure>0</syncFailure>
+               <scriptSuccess>0</scriptSuccess>
+               <scriptFailure>0</scriptFailure>
+               <otherSuccess>0</otherSuccess>
+               <otherFailure>0</otherFailure>
+               <averageTime>4</averageTime>
+               <minTime>4</minTime>
+               <maxTime>4</maxTime>
+               <totalTime>8</totalTime>
+            </entry>
+         </provisioningStatistics>
+         <mappingsStatistics>
+            <entry>
+               <object>Addressbook</object>
+               <count>303</count>
+               <averageTime>0</averageTime>
+               <minTime>0</minTime>
+               <maxTime>17</maxTime>
+               <totalTime>191</totalTime>
+            </entry>
+            <entry>
+               <object>LDAP Projects MetaRole</object>
+               <count>9</count>
+               <averageTime>35</averageTime>
+               <minTime>18</minTime>
+               <maxTime>61</maxTime>
+               <totalTime>322</totalTime>
+            </entry>
+            <entry>
+               <object>Default User Template</object>
+               <count>2888</count>
+               <averageTime>4</averageTime>
+               <minTime>0</minTime>
+               <maxTime>2171</maxTime>
+               <totalTime>12472</totalTime>
+            </entry>
+            <entry>
+               <object>Patron</object>
+               <count>9</count>
+               <averageTime>0</averageTime>
+               <minTime>0</minTime>
+               <maxTime>1</maxTime>
+               <totalTime>1</totalTime>
+            </entry>
+            <entry>
+               <object>LDAP Server (OpenDJ) over new LDAPConn.</object>
+               <count>101</count>
+               <averageTime>23</averageTime>
+               <minTime>0</minTime>
+               <maxTime>2367</maxTime>
+               <totalTime>2421</totalTime>
+            </entry>
+            <entry>
+               <object>Full Time Employee</object>
+               <count>1444</count>
+               <averageTime>13</averageTime>
+               <minTime>0</minTime>
+               <maxTime>575</maxTime>
+               <totalTime>19559</totalTime>
+            </entry>
+            <entry>
+               <object>F0200</object>
+               <count>30</count>
+               <averageTime>17</averageTime>
+               <minTime>0</minTime>
+               <maxTime>254</maxTime>
+               <totalTime>529</totalTime>
+            </entry>
+            <entry>
+               <object>HR Feed</object>
+               <count>3734</count>
+               <averageTime>2</averageTime>
+               <minTime>0</minTime>
+               <maxTime>2629</maxTime>
+               <totalTime>8917</totalTime>
+            </entry>
+            <entry>
+               <object>LDAP Server (OpenLDAP) over new LDAPConn.</object>
+               <count>355</count>
+               <averageTime>1</averageTime>
+               <minTime>0</minTime>
+               <maxTime>53</maxTime>
+               <totalTime>576</totalTime>
+            </entry>
+         </mappingsStatistics>
+         <notificationsStatistics/>
+         <lastMessageTimestamp>2018-07-01T11:03:45.475+02:00</lastMessageTimestamp>
+         <lastMessage>Successfully finished ICF_SYNC of AccountObjectClass on HR Feed in 3 ms</lastMessage>
+      </environmentalPerformanceInformation>
+      <iterativeTaskInformation>
+         <lastSuccessObjectName>7</lastSuccessObjectName>
+         <lastSuccessObjectDisplayName>7 (ACCOUNT - null - AccountObjectClass)</lastSuccessObjectDisplayName>
+         <lastSuccessObjectType>c:ShadowType</lastSuccessObjectType>
+         <lastSuccessObjectOid>9da347be-062d-4bde-abc1-ffe193f166cd</lastSuccessObjectOid>
+         <lastSuccessEndTimestamp>2018-03-10T15:26:15.228+01:00</lastSuccessEndTimestamp>
+         <lastSuccessDuration>2282</lastSuccessDuration>
+         <totalSuccessDuration>235437</totalSuccessDuration>
+         <totalSuccessCount>252</totalSuccessCount>
+         <lastFailureObjectName>444</lastFailureObjectName>
+         <lastFailureObjectDisplayName>444 (ACCOUNT - null - AccountObjectClass)</lastFailureObjectDisplayName>
+         <lastFailureObjectType>c:ShadowType</lastFailureObjectType>
+         <lastFailureObjectOid>1e535028-152c-433d-bd0a-7bb8086bc2f7</lastFailureObjectOid>
+         <lastFailureEndTimestamp>2015-12-16T09:51:13.744+01:00</lastFailureEndTimestamp>
+         <lastFailureDuration>774</lastFailureDuration>
+         <totalFailureDuration>3978</totalFailureDuration>
+         <totalFailureCount>6</totalFailureCount>
+         <lastFailureExceptionMessage>IllegalStateException: More than one shadow found for shadow:null(null)</lastFailureExceptionMessage>
+      </iterativeTaskInformation>
+      <synchronizationInformation>
+         <countProtected>0</countProtected>
+         <countNoSynchronizationPolicy>0</countNoSynchronizationPolicy>
+         <countSynchronizationDisabled>0</countSynchronizationDisabled>
+         <countNotApplicableForTask>0</countNotApplicableForTask>
+         <countDeleted>14</countDeleted>
+         <countDisputed>0</countDisputed>
+         <countLinked>215</countLinked>
+         <countUnlinked>0</countUnlinked>
+         <countUnmatched>29</countUnmatched>
+         <countProtectedAfter>0</countProtectedAfter>
+         <countNoSynchronizationPolicyAfter>0</countNoSynchronizationPolicyAfter>
+         <countSynchronizationDisabledAfter>0</countSynchronizationDisabledAfter>
+         <countNotApplicableForTaskAfter>0</countNotApplicableForTaskAfter>
+         <countDeletedAfter>0</countDeletedAfter>
+         <countDisputedAfter>0</countDisputedAfter>
+         <countLinkedAfter>19</countLinkedAfter>
+         <countUnlinkedAfter>0</countUnlinkedAfter>
+         <countUnmatchedAfter>0</countUnmatchedAfter>
+      </synchronizationInformation>
+      <actionsExecutedInformation>
+         <objectActionsEntry>
+            <objectType>c:ShadowType</objectType>
+            <operation>modify</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>37</totalSuccessCount>
+            <lastSuccessObjectName>7</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>Shadow 7 (ACCOUNT - default - AccountObjectClass)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>9da347be-062d-4bde-abc1-ffe193f166cd</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2018-03-10T15:26:14.386+01:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </objectActionsEntry>
+         <objectActionsEntry>
+            <objectType>c:ShadowType</objectType>
+            <operation>modify</operation>
+            <totalSuccessCount>247</totalSuccessCount>
+            <lastSuccessObjectName>7</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>Shadow 7 (ACCOUNT - default - AccountObjectClass)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>9da347be-062d-4bde-abc1-ffe193f166cd</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2018-03-10T15:26:13.032+01:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </objectActionsEntry>
+         <objectActionsEntry>
+            <objectType>c:UserType</objectType>
+            <operation>modify</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>86</totalSuccessCount>
+            <lastSuccessObjectName>cubi</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>User Lucia Cubanova (cubi)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>8d35e210-d7c0-4083-9bd7-033a5c6009d1</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2018-03-10T15:26:14.874+01:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </objectActionsEntry>
+         <objectActionsEntry>
+            <objectType>c:ShadowType</objectType>
+            <operation>add</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>48</totalSuccessCount>
+            <lastSuccessObjectDisplayName>Shadow null (ACCOUNT - default - inetOrgPerson)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>b1f33eb7-6046-4e4c-b8b4-4c0dcbd50d0a</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2018-03-10T15:26:14.823+01:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </objectActionsEntry>
+         <objectActionsEntry>
+            <objectType>c:UserType</objectType>
+            <operation>add</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>25</totalSuccessCount>
+            <lastSuccessObjectName>cubi</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>User Lucia Cubanova (cubi)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>8d35e210-d7c0-4083-9bd7-033a5c6009d1</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2018-03-10T15:26:14.320+01:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </objectActionsEntry>
+         <objectActionsEntry>
+            <objectType>c:UserType</objectType>
+            <operation>delete</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>14</totalSuccessCount>
+            <lastSuccessObjectName>cubi</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>User Lucia Cubanova (cubi)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>d0e438ea-e32d-4b3d-8ceb-871f47d1265d</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2017-07-29T12:04:07.504+02:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </objectActionsEntry>
+         <objectActionsEntry>
+            <objectType>c:ShadowType</objectType>
+            <operation>delete</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>28</totalSuccessCount>
+            <lastSuccessObjectName>uid=cubi,ou=People,dc=example,dc=com</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>Shadow uid=cubi,ou=People,dc=example,dc=com (ACCOUNT - default - inetOrgPerson)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>b6d1c7e6-da0f-45eb-8b11-56e2b15c5597</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2017-07-29T12:04:07.775+02:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </objectActionsEntry>
+         <resultingObjectActionsEntry>
+            <objectType>c:ShadowType</objectType>
+            <operation>modify</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>37</totalSuccessCount>
+            <lastSuccessObjectName>7</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>Shadow 7 (ACCOUNT - default - AccountObjectClass)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>9da347be-062d-4bde-abc1-ffe193f166cd</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2018-03-10T15:26:14.386+01:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </resultingObjectActionsEntry>
+         <resultingObjectActionsEntry>
+            <objectType>c:ShadowType</objectType>
+            <operation>modify</operation>
+            <totalSuccessCount>220</totalSuccessCount>
+            <lastSuccessObjectName>1</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>Shadow 1 (ACCOUNT - default - AccountObjectClass)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>d55b10f8-f24e-4869-8bcf-9fc7c37d3934</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2016-06-22T16:59:23.801+02:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </resultingObjectActionsEntry>
+         <resultingObjectActionsEntry>
+            <objectType>c:ShadowType</objectType>
+            <operation>add</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>48</totalSuccessCount>
+            <lastSuccessObjectDisplayName>Shadow null (ACCOUNT - default - inetOrgPerson)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>b1f33eb7-6046-4e4c-b8b4-4c0dcbd50d0a</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2018-03-10T15:26:14.823+01:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </resultingObjectActionsEntry>
+         <resultingObjectActionsEntry>
+            <objectType>c:UserType</objectType>
+            <operation>add</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>25</totalSuccessCount>
+            <lastSuccessObjectName>cubi</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>User Lucia Cubanova (cubi)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>8d35e210-d7c0-4083-9bd7-033a5c6009d1</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2018-03-10T15:26:14.320+01:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </resultingObjectActionsEntry>
+         <resultingObjectActionsEntry>
+            <objectType>c:UserType</objectType>
+            <operation>modify</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>5</totalSuccessCount>
+            <lastSuccessObjectName>leonardo</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>User Leonardo da Vinci (leonardo)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>6054d4f2-c245-453e-991f-024c0ea398f1</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2016-06-22T16:59:25.173+02:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </resultingObjectActionsEntry>
+         <resultingObjectActionsEntry>
+            <objectType>c:UserType</objectType>
+            <operation>delete</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>14</totalSuccessCount>
+            <lastSuccessObjectName>cubi</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>User Lucia Cubanova (cubi)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>d0e438ea-e32d-4b3d-8ceb-871f47d1265d</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2017-07-29T12:04:07.504+02:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </resultingObjectActionsEntry>
+         <resultingObjectActionsEntry>
+            <objectType>c:ShadowType</objectType>
+            <operation>delete</operation>
+            <channel>http://midpoint.evolveum.com/xml/ns/public/provisioning/channels-3#liveSync</channel>
+            <totalSuccessCount>28</totalSuccessCount>
+            <lastSuccessObjectName>cubi</lastSuccessObjectName>
+            <lastSuccessObjectDisplayName>Shadow cubi (ACCOUNT - default - AccountObjectClass)</lastSuccessObjectDisplayName>
+            <lastSuccessObjectOid>f49d362d-35d6-41a1-85b4-2c4fe4d7b258</lastSuccessObjectOid>
+            <lastSuccessTimestamp>2017-07-29T12:04:07.609+02:00</lastSuccessTimestamp>
+            <totalFailureCount>0</totalFailureCount>
+         </resultingObjectActionsEntry>
+      </actionsExecutedInformation>
+      <timestamp>2018-07-01T11:03:45.519+02:00</timestamp>
+      <liveInformation>false</liveInformation>
+   </operationStats>
+   <recurrence>recurring</recurrence>
+   <binding>tight</binding>
+   <schedule>
+      <interval>5</interval>
+      <misfireAction>executeImmediately</misfireAction>
+   </schedule>
+   <threadStopAction>restart</threadStopAction>
+</task>
+</objects>

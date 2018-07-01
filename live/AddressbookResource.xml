@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+	xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+	xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3">
+	<resource xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+          xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
+          xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
+          xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3"
+          xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3"
+          xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"
+          xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
+          oid="c1b8b075-8c45-4058-ba32-753b87ac2da0"
+          version="21">
+   <name>Addressbook</name>
+   <description>Simple database application that maintains addresses and telephone numbers of people.&#xD;
+		It is authoritative only for telephone number. It also has postal address that no&#xD;
+		other application has.</description>
+   <fetchResult>
+      <operation>com.evolveum.midpoint.provisioning.api.ProvisioningService.getObject</operation>
+      <status>success</status>
+      <params>
+         <entry key="oid">
+            <paramValue>c1b8b075-8c45-4058-ba32-753b87ac2da0</paramValue>
+         </entry>
+         <entry key="type">
+            <unknownJavaObject>
+               <class>java.lang.Class</class>
+               <toString>class com.evolveum.midpoint.xml.ns._public.common.common_3.ResourceType</toString>
+            </unknownJavaObject>
+         </entry>
+         <entry key="options"/>
+      </params>
+      <context>
+         <entry key="implementationClass">
+            <unknownJavaObject>
+               <class>java.lang.Class</class>
+               <toString>class com.evolveum.midpoint.provisioning.impl.ProvisioningServiceImpl</toString>
+            </unknownJavaObject>
+         </entry>
+      </context>
+      <token>1000000000000140953</token>
+      <partialResults>
+         <operation>com.evolveum.midpoint.repo.api.RepositoryService.getVersion</operation>
+         <status>success</status>
+         <params>
+            <entry key="oid">
+               <paramValue>c1b8b075-8c45-4058-ba32-753b87ac2da0</paramValue>
+            </entry>
+            <entry key="type">
+               <paramValue>com.evolveum.midpoint.xml.ns._public.common.common_3.ResourceType</paramValue>
+            </entry>
+         </params>
+         <token>1000000000000140954</token>
+      </partialResults>
+   </fetchResult>
+   <metadata>
+      <createTimestamp>2018-06-26T14:59:42.486+02:00</createTimestamp>
+      <creatorRef oid="00000000-0000-0000-0000-000000000002"
+                  relation="org:default"
+                  type="c:UserType"><!-- administrator --></creatorRef>
+      <createChannel>http://midpoint.evolveum.com/xml/ns/public/model/channels-3#objectImport</createChannel>
+   </metadata>
+   <operationalState>
+      <lastAvailabilityStatus>up</lastAvailabilityStatus>
+   </operationalState>
+   <connectorRef oid="1cdbf222-8457-4253-b4db-138ef7b0bdef"
+                 relation="org:default"
+                 type="c:ConnectorType"><!-- ICF org.identityconnectors.databasetable.DatabaseTableConnector v1.4.2.0 -->
+      <filter>
+         <q:equal>
+            <q:path>connectorType</q:path>
+            <q:value>org.identityconnectors.databasetable.DatabaseTableConnector</q:value>
+         </q:equal>
+      </filter>
+   </connectorRef>
+   <connectorConfiguration xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xsi:type="c:ConnectorConfigurationType">
+      <icfc:configurationProperties xmlns:gen798="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-databasetable/org.identityconnectors.databasetable.DatabaseTableConnector"
+                                    xsi:type="icfc:ConfigurationPropertiesType">
+         <gen798:host>localhost</gen798:host>
+         <gen798:port>5432</gen798:port>
+         <gen798:user>addressbook</gen798:user>
+         <gen798:password>
+            <t:encryptedData>
+               <t:encryptionMethod>
+                  <t:algorithm>http://www.w3.org/2001/04/xmlenc#aes128-cbc</t:algorithm>
+               </t:encryptionMethod>
+               <t:keyInfo>
+                  <t:keyName>4HXeUejV93Vd3JuIZz7sbs5bVko=</t:keyName>
+               </t:keyInfo>
+               <t:cipherData>
+                  <t:cipherValue>Y4J5kYVJzq8wBKugHixKznuvS6x/ZJdO5UWgGbsnzK8=</t:cipherValue>
+               </t:cipherData>
+            </t:encryptedData>
+         </gen798:password>
+         <gen798:database>addressbook</gen798:database>
+         <gen798:table>people</gen798:table>
+         <gen798:keyColumn>username</gen798:keyColumn>
+         <gen798:passwordColumn>password</gen798:passwordColumn>
+         <gen798:jdbcDriver>org.postgresql.Driver</gen798:jdbcDriver>
+         <gen798:jdbcUrlTemplate>jdbc:postgresql://%h:%p/%d</gen798:jdbcUrlTemplate>
+         <gen798:enableEmptyString>false</gen798:enableEmptyString>
+         <gen798:rethrowAllSQLExceptions>true</gen798:rethrowAllSQLExceptions>
+         <gen798:nativeTimestamps>true</gen798:nativeTimestamps>
+      </icfc:configurationProperties>
+   </connectorConfiguration>
+   <schema>
+      <cachingMetadata>
+         <retrievalTimestamp>2014-06-02T17:56:17.148+02:00</retrievalTimestamp>
+         <serialNumber>fd1312d11b97a1f3-67cae5b6376562e0</serialNumber>
+      </cachingMetadata>
+      <definition>
+         <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                     xmlns:a="http://prism.evolveum.com/xml/ns/public/annotation-3"
+                     xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
+                     xmlns:ra="http://midpoint.evolveum.com/xml/ns/public/resource/annotation-3"
+                     elementFormDefault="qualified"
+                     targetNamespace="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">
+            <xsd:import namespace="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"/>
+            <xsd:import namespace="http://prism.evolveum.com/xml/ns/public/annotation-3"/>
+            <xsd:import namespace="http://midpoint.evolveum.com/xml/ns/public/resource/annotation-3"/>
+            <xsd:complexType name="AccountObjectClass">
+               <xsd:annotation>
+                  <xsd:appinfo>
+                     <ra:resourceObject/>
+                     <ra:identifier>icfs:uid</ra:identifier>
+                     <ra:secondaryIdentifier>icfs:name</ra:secondaryIdentifier>
+                     <ra:displayNameAttribute>icfs:name</ra:displayNameAttribute>
+                     <ra:namingAttribute>icfs:name</ra:namingAttribute>
+                     <ra:nativeObjectClass>__ACCOUNT__</ra:nativeObjectClass>
+                     <ra:kind>account</ra:kind>
+                     <ra:default>true</ra:default>
+                  </xsd:appinfo>
+               </xsd:annotation>
+               <xsd:sequence>
+                  <xsd:element minOccurs="0" ref="icfs:uid">
+                     <xsd:annotation>
+                        <xsd:appinfo>
+                           <a:displayName>ICF UID</a:displayName>
+                           <a:access>read</a:access>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="modified" type="xsd:string"/>
+                  <xsd:element minOccurs="0" name="country" type="xsd:string"/>
+                  <xsd:element minOccurs="0" name="fax_number" type="xsd:string"/>
+                  <xsd:element minOccurs="0" name="created" type="xsd:string"/>
+                  <xsd:element name="last_name" type="xsd:string"/>
+                  <xsd:element minOccurs="0" name="tel_number" type="xsd:string"/>
+                  <xsd:element minOccurs="0" name="validity" type="xsd:boolean">
+                     <xsd:annotation>
+                        <xsd:appinfo>
+                           <a:ignore>true</a:ignore>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="first_name" type="xsd:string"/>
+                  <xsd:element minOccurs="0" name="street_address" type="xsd:string"/>
+                  <xsd:element ref="icfs:name">
+                     <xsd:annotation>
+                        <xsd:appinfo>
+                           <a:displayName>ICF NAME</a:displayName>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="floor" type="xsd:int"/>
+                  <xsd:element minOccurs="0" name="postal_code" type="xsd:string"/>
+                  <xsd:element minOccurs="0" name="city" type="xsd:string"/>
+                  <xsd:element minOccurs="0" name="office_id" type="xsd:string"/>
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:schema>
+      </definition>
+   </schema>
+   <schemaHandling>
+      <objectType id="1">
+         <intent>default</intent>
+         <displayName>Default Account</displayName>
+         <default>true</default>
+         <objectClass>ri:AccountObjectClass</objectClass>
+         <attribute id="2">
+            <c:ref>icfs:uid</c:ref>
+            <displayName>Entry ID</displayName>
+         </attribute>
+         <attribute id="3">
+            <c:ref>icfs:name</c:ref>
+            <displayName>Username</displayName>
+            <limitations>
+               <minOccurs>0</minOccurs>
+            </limitations>
+            <outbound>
+               <strength>weak</strength>
+               <source>
+                  <c:path>$user/name</c:path>
+               </source>
+            </outbound>
+         </attribute>
+         <attribute id="4">
+            <c:ref>ri:first_name</c:ref>
+            <displayName>First Name</displayName>
+            <outbound>
+               <source>
+                  <c:path>$user/givenName</c:path>
+               </source>
+            </outbound>
+         </attribute>
+         <attribute id="5">
+            <c:ref>ri:last_name</c:ref>
+            <displayName>Last name</displayName>
+            <limitations>
+               <minOccurs>0</minOccurs>
+            </limitations>
+            <outbound>
+               <source>
+                  <c:path>$user/familyName</c:path>
+               </source>
+            </outbound>
+         </attribute>
+         <attribute id="6">
+            <c:ref>ri:tel_number</c:ref>
+            <displayName>Telephone Number</displayName>
+            <outbound>
+               <source>
+                  <c:path>$user/telephoneNumber</c:path>
+               </source>
+            </outbound>
+         </attribute>
+         <attribute id="7">
+            <c:ref>ri:city</c:ref>
+            <displayName>City</displayName>
+            <outbound>
+               <source>
+                  <c:path>$user/locality</c:path>
+               </source>
+            </outbound>
+         </attribute>
+         <activation>
+            <administrativeStatus>
+               <outbound id="8"/>
+            </administrativeStatus>
+         </activation>
+         <credentials>
+            <password xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:type="c:ResourcePasswordDefinitionType">
+               <outbound/>
+            </password>
+         </credentials>
+      </objectType>
+   </schemaHandling>
+   <capabilities>
+      <cachingMetadata>
+         <retrievalTimestamp>2014-06-02T17:56:17.150+02:00</retrievalTimestamp>
+         <serialNumber>1c5f2e331ca246bb-55d8dac37b0657e3</serialNumber>
+      </cachingMetadata>
+      <native xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:type="c:CapabilityCollectionType">
+         <cap:credentials>
+            <cap:password>
+               <cap:returnedByDefault>false</cap:returnedByDefault>
+            </cap:password>
+         </cap:credentials>
+         <cap:liveSync/>
+         <cap:testConnection/>
+         <cap:create/>
+         <cap:read/>
+         <cap:update/>
+         <cap:delete/>
+         <cap:script>
+            <cap:host>
+               <cap:type>connector</cap:type>
+            </cap:host>
+         </cap:script>
+      </native>
+      <configured xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:type="c:CapabilityCollectionType">
+         <cap:activation>
+            <cap:status>
+               <cap:attribute>ri:validity</cap:attribute>
+               <cap:enableValue>true</cap:enableValue>
+               <cap:disableValue>false</cap:disableValue>
+               <cap:disableValue/>
+            </cap:status>
+         </cap:activation>
+      </configured>
+   </capabilities>
+</resource>
+</objects>
