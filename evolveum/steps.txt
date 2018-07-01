@@ -2,3 +2,6 @@
     role-meta-functional.xml
     role-meta-project.xml
 
+2. Import object templates
+    object-template-org.xml
+    object-template-user.xml
