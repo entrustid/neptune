@@ -1,0 +1,2 @@
+1. AD Livesync does not work
+2. AD Credential sync does not work
