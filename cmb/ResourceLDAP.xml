@@ -23,7 +23,7 @@
         xmlns:mr="http://prism.evolveum.com/xml/ns/public/matching-rule-3" 
         xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3">
 
-        <name>OpenLDAP</name>
+        <name>(Outbound) OpenLDAP</name>
 
         <description>
 		LDAP resource using a ConnId LDAP connector. It contains configuration
@@ -262,6 +262,7 @@
                     <situation>linked</situation>
                     <synchronize>true</synchronize>
                 </reaction>
+
                 <reaction>
                     <situation>deleted</situation>
                     <synchronize>true</synchronize>
@@ -270,6 +271,7 @@
                         </handlerUri>
                     </action>
                 </reaction>
+                
                 <reaction>
                     <situation>unlinked</situation>
                     <synchronize>true</synchronize>
