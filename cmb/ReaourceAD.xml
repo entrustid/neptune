@@ -10,15 +10,16 @@
     xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3" 
     xmlns:syncext="http://midpoint.evolveum.com/xml/ns/public/model/extension-3">
 
-    <resource xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
+    <resource oid="746ecf5e-3e8c-11e6-b2f9-3c970e44b9e2" 
+        xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
         xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" 
         xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" 
         xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
         xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" 
         xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" 
-        xmlns:mr="http://prism.evolveum.com/xml/ns/public/matching-rule-3" oid="746ecf5e-3e8c-11e6-b2f9-3c970e44b9e2">
+        xmlns:mr="http://prism.evolveum.com/xml/ns/public/matching-rule-3">
 
-        <name>CMB Active Directory (LDAP)</name>
+        <name>[inbound] Active Directory</name>
 
         <connectorRef type="ConnectorType">
             <filter>
@@ -38,7 +39,7 @@
                 <icfcldap:bindPassword>
                     <t:clearValue>idp@cmb2018</t:clearValue>
                 </icfcldap:bindPassword>
-                <icfcldap:pagingBlockSize>5</icfcldap:pagingBlockSize>                <!-- ridiculously small, just to test paging -->
+                <icfcldap:pagingBlockSize>50</icfcldap:pagingBlockSize>
             </icfc:configurationProperties>
             <icfc:resultsHandlerConfiguration>
                 <icfc:enableNormalizingResultsHandler>false</icfc:enableNormalizingResultsHandler>
@@ -53,7 +54,6 @@
                 <generateObjectClass>ri:user</generateObjectClass>
             </generationConstraints>
         </schema>
-
 
         <schemaHandling>
             <!-- handling of user accounts -->
@@ -110,7 +110,17 @@
                     <displayName>First Name</displayName>
                     <inbound>
                         <target>
-                            <path>givenName</path>
+                            <path>$focus/givenName</path>
+                        </target>
+                    </inbound>
+                </attribute>
+
+                <attribute>
+                    <ref>ri:mail</ref>
+                    <displayName>Email Address</displayName>
+                    <inbound>
+                        <target>
+                            <path>$focus/emailAddress</path>
                         </target>
                     </inbound>
                 </attribute>
@@ -186,7 +196,7 @@
         xmlns:mext="http://midpoint.evolveum.com/xml/ns/public/model/extension-3" 
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-        <name>AD Import</name>
+        <name>AD Import Task</name>
         <extension>
             <mext:kind>account</mext:kind>
         </extension>

@@ -9,16 +9,16 @@
     xmlns:mr="http://prism.evolveum.com/xml/ns/public/matching-rule-3" 
     xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3">
 
-    <resource xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
+    <resource oid="9585abbc-ada9-471b-bc7a-dc74d1ee1007" 
+        xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
         xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" 
         xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
         xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" 
         xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" 
         xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" 
-        xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
-        oid="9585abbc-ada9-471b-bc7a-dc74d1ee1007">
+        xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">
 
-        <name>(Outbound) Jira</name>
+        <name>[Outbound] Jira</name>
 
         <connectorRef type="ConnectorType">
             <description>
@@ -38,7 +38,7 @@
                 <icfcldap:baseUrl>jira-cmbc.yufuid.com</icfcldap:baseUrl>
                 <icfcldap:username>admin</icfcldap:username>
                 <icfcldap:password>
-                    <t:clearValue>secret</t:clearValue>
+                    <t:clearValue>Yufuid2018</t:clearValue>
                 </icfcldap:password>
             </icfc:configurationProperties>
         </connectorConfiguration>
@@ -50,6 +50,7 @@
                 <displayName>Jira Account</displayName>
                 <default>false</default>
                 <objectClass>ri:AccountObjectClass</objectClass>
+
                 <attribute>
                     <c:ref>icfs:name</c:ref>
                     <displayName>Name</displayName>
@@ -64,6 +65,7 @@
                         </source>
                     </outbound>
                 </attribute>
+
                 <attribute>
                     <c:ref>ri:displayName</c:ref>
                     <displayName>Display name</displayName>
@@ -78,6 +80,7 @@
                         </source>
                     </outbound>
                 </attribute>
+
                 <attribute>
                     <c:ref>ri:emailAddress</c:ref>
                     <displayName>Email address</displayName>
@@ -92,6 +95,7 @@
                         </source>
                     </outbound>
                 </attribute>
+
                 <attribute>
                     <c:ref>ri:binaryAvatar</c:ref>
                     <displayName>Avatar</displayName>
@@ -150,10 +154,8 @@
     </resource>
 
     <task oid="b274423c-a01b-4ac1-a409-240de1677caa">
-        <name>Live Sync: LDAP Server (OpenDJ)</name>
-        <description>
-            Definition of a live sychnronization task. It will poll changelog and pull in changes
-        </description>
+        <name>Live Sync: Jira</name>
+        <description></description>
         <taskIdentifier>b778d947-54f7-47f4-a7b9-15377621afe9</taskIdentifier>
         <ownerRef oid="00000000-0000-0000-0000-000000000002"/>
         <executionStatus>runnable</executionStatus>
@@ -162,7 +164,28 @@
         <recurrence>recurring</recurrence>
         <binding>tight</binding>
         <schedule>
-            <interval>5</interval>
+            <interval>10</interval>
+        </schedule>
+    </task>
+
+    <task oid="5350ec2f-30e0-4885-8ab5-be4fdb2ebaf2" 
+        xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
+        xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
+        xmlns:mext="http://midpoint.evolveum.com/xml/ns/public/model/extension-3" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <name>Reconciliation: Symas OpenLDAP</name>
+        <extension>
+            <mext:kind>account</mext:kind>
+        </extension>
+        <taskIdentifier>7df47dc8-3913-4d15-9367-ce23428573f4</taskIdentifier>
+        <ownerRef oid="00000000-0000-0000-0000-000000000002"/>
+        <executionStatus>runnable</executionStatus>
+        <handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/synchronization/task/reconciliation/handler-3</handlerUri>
+        <objectRef oid="9585abbc-ada9-471b-bc7a-dc74d1ee1007" type="ResourceType"/>
+        <recurrence>recurring</recurrence>
+        <schedule>
+            <interval>30</interval>
         </schedule>
     </task>
 </objects>

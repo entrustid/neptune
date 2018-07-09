@@ -15,6 +15,11 @@ ou: People
 #aci: (targetattr="*||ds-pwp-account-disabled")(version 3.0; acl "IDM Access"; allow (all)
 #  userdn="ldap:///uid=idm,ou=Administrators,dc=example,dc=com";)
 
+dn: ou=Neptune,dc=example,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: Neptune
+
 dn: ou=Administrators,dc=example,dc=com
 objectclass: top
 objectclass: organizationalunit
@@ -30,7 +35,3 @@ objectclass: top
 sn: IDM Administrator
 userpassword: secret
 
-dn: ou=Neptune,dc=example,dc=com
-objectclass: top
-objectclass: organizationalUnit
-ou: Neptune
