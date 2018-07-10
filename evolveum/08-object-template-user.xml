@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objectTemplate oid="7d47f920-07db-11e7-97ab-9f2adc778984" 
+<!--
+  object template: UserType
+    mapping: givenName, familyName => name, on condition: givenName != null && familyName != null
+	mapping: givenName, familyName => emailAddress
+	mapping: organizationalUnit => assignment while c:OrgType.name == $organizationalUnit
+	mapping: title => assignment while c:RoleType..name == $title
+  -->
+  
+<objectTemplate oid="7d47f920-07db-11e7-97ab-9f2adc778984"
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
-	xmlns='http://midpoint.evolveum.com/xml/ns/public/common/common-3' 
-	xmlns:c='http://midpoint.evolveum.com/xml/ns/public/common/common-3' 
+	xmlns='http://midpoint.evolveum.com/xml/ns/public/common/common-3'
+	xmlns:c='http://midpoint.evolveum.com/xml/ns/public/common/common-3'
 	xmlns:t='http://prism.evolveum.com/xml/ns/public/types-3' 
 	xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3">
-
-	<name>EVE User Template</name>
+	
+	<name>08-User Template</name>
 
 	<mapping>
-		<name>Eve template-user-name</name>
+		<name>template-user-name</name>
 		<strength>weak</strength>
 		<source>
 			<path>givenName</path>
@@ -28,7 +36,7 @@
 		<condition>
 			<script>
 				<code>givenName != null &amp;&amp; familyName != null</code>
-			</script>
+			</script>			
 		</condition>
 	</mapping>
 
@@ -43,7 +51,7 @@
 		</source>
 		<expression>
 			<script>
-				<code>givenName.getNorm() + '.' + familyName.getNorm() + '@example.com'</code>
+				<code>givenName.getNorm() + '.' + familyName.getNorm() + '@neptune.com'</code>
 			</script>
 		</expression>
 		<target>
@@ -52,7 +60,7 @@
 		<condition>
 			<script>
 				<code>givenName != null &amp;&amp; familyName != null</code>
-			</script>
+			</script>			
 		</condition>
 	</mapping>
 
@@ -73,7 +81,7 @@
 						</expression>
 					</q:equal>
 				</filter>
-			</assignmentTargetSearch>
+			</assignmentTargetSearch>    	
 		</expression>
 		<target>
 			<path>assignment</path>
@@ -97,7 +105,7 @@
 						</expression>
 					</q:equal>
 				</filter>
-			</assignmentTargetSearch>
+			</assignmentTargetSearch>    	
 		</expression>
 		<target>
 			<path>assignment</path>

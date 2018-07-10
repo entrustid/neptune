@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  object template: org type
+    mapping: orgType => assignment, expression value: projectmetarole, on condition: orgType == 'project'
+	mapping: orgType => assignment, expression value: functionalmetarole, on condition: orgType == 'functional'
+  -->
+
 <objectTemplate oid="c4246978-107e-11e6-8818-8b900a1eb9d9" 
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
 	xmlns='http://midpoint.evolveum.com/xml/ns/public/common/common-3' 
@@ -6,10 +12,10 @@
 	xmlns:t='http://prism.evolveum.com/xml/ns/public/types-3' 
 	xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3">
 
-	<name>EVE Org Template</name>
+	<name>07-Org Template</name>
 
 	<mapping>
-		<name>Eve template-org-meta-project</name>
+		<name>template-org-meta-project</name>
 		<strength>strong</strength>
 		<source>
 			<path>orgType</path>

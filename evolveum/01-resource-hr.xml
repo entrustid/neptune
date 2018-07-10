@@ -1,34 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright (c) 2010-2017 Evolveum
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~     http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
+  resource: CSV
+  schemaHandling:
+    account - ri:AccountObjectClass
+       activation: ri:active - true/false
   -->
 
-<c:objects xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
-	   xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-           xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3"
-           xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3"
-           xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3"
-           xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"
-           xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3"
-           xmlns:syncext="http://midpoint.evolveum.com/xml/ns/public/model/extension-3">
+<c:objects xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
+	xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" 
+	xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" 
+	xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" 
+	xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" 
+	xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3" 
+	xmlns:syncext="http://midpoint.evolveum.com/xml/ns/public/model/extension-3">
 
 	<c:resource oid="66245ea2-07d9-11e7-ac98-67b627683b1b">
 
-		<name>HR</name>
+		<name>01-HR</name>
 		<description>HR data source simulated by CSV file</description>
 
 		<connectorRef type="ConnectorType">
@@ -39,17 +30,17 @@
 				</q:equal>
 			</filter>
 		</connectorRef>
-		
+
 		<connectorConfiguration xmlns:icfi="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-csv/com.evolveum.polygon.connector.csv.CsvConnector">
-						   
+
 			<icfc:configurationProperties>
-				<icfi:filePath>/var/opt/midpoint-evolveum/resources/hr.csv</icfi:filePath>
+				<icfi:filePath>/Users/weiwang/sandbox/entrustid/neptune/evolveum/hr.csv</icfi:filePath>
 				<icfi:encoding>utf-8</icfi:encoding>
 				<icfi:fieldDelimiter>,</icfi:fieldDelimiter>
 				<icfi:multivalueDelimiter>;</icfi:multivalueDelimiter>
 				<icfi:uniqueAttribute>empno</icfi:uniqueAttribute>
 			</icfc:configurationProperties>
-		
+
 		</connectorConfiguration>
 
 		<schemaHandling>
@@ -57,7 +48,7 @@
 			<objectType>
 				<default>true</default>
 				<objectClass>ri:AccountObjectClass</objectClass>
-				
+
 				<attribute>
 					<ref>ri:empno</ref>
 					<displayName>Employee ID</displayName>
@@ -67,7 +58,7 @@
 						</target>
 					</inbound>
 				</attribute>
-				
+
 				<attribute>
 					<ref>ri:fullname</ref>
 					<inbound>
@@ -94,7 +85,7 @@
 						</target>
 					</inbound>
 				</attribute>
-				
+
 				<attribute>
 					<ref>ri:orgId</ref>
 					<inbound>
@@ -103,7 +94,7 @@
 						</target>
 					</inbound>
 				</attribute>
-				
+
 				<attribute>
 					<ref>ri:job</ref>
 					<inbound>
@@ -134,6 +125,7 @@
 
 			</objectType>
 		</schemaHandling>
+
 		<capabilities xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3">
 			<configured>
 				<cap:activation>
@@ -191,22 +183,4 @@
 			</objectSynchronization>
 		</synchronization>
 	</c:resource>
-
-	<task oid="c8c74686-07da-11e7-ade5-772d2eae600d">
-		<name>Synchronization: HR</name>
-		<extension>
-			<syncext:objectclass>ri:AccountObjectClass</syncext:objectclass>
-		</extension>
-		<taskIdentifier>c8c74686-07da-11e7-ade5-772d2eae600d</taskIdentifier>
-		<ownerRef oid="00000000-0000-0000-0000-000000000002"/>
-		<executionStatus>runnable</executionStatus>
-		<handlerUri>http://midpoint.evolveum.com/xml/ns/public/model/synchronization/task/live-sync/handler-3</handlerUri>
-	        <objectRef oid="66245ea2-07d9-11e7-ac98-67b627683b1b" type="c:ResourceType"/>
-		<recurrence>recurring</recurrence>
-		<binding>tight</binding>
-		<schedule>
-			<interval>5</interval>
-		</schedule>
-	</task>
-
 </c:objects>

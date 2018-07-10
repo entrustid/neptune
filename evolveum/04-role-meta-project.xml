@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  metarole: Project Metarole
+    inducement => OpenLDAP: entitlement, displayName -> ri:description
+    inducement => OpenLDAP: association with ri:ldapGroup on condition of focus.getClass() == UserType.class
+  -->
+
 <role oid="daa3b69a-107e-11e6-9551-538f491a0753" 
 	xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
 	xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" 
 	xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" 
 	xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" 
 	xmlns:piracy="http://midpoint.evolveum.com/xml/ns/samples/piracy">
-
-	<name>Eve Project Metarole</name>
+	<name>04-Project Metarole</name>
 
 	<inducement>
 		<construction>
@@ -30,7 +35,6 @@
 		<description>PM-I2-L</description>
 		<construction>
 			<description>PM-I2-L</description>
-			<!-- OpenLDAP resource -->
 			<resourceRef oid="28b699cc-107c-11e6-8277-034841879377" type="c:ResourceType"/>
 			<kind>account</kind>
 			<intent>default</intent>
@@ -95,7 +99,6 @@
 		<description>PM-I2-P</description>
 		<construction>
 			<description>PM-I2-P</description>
-			<!-- OpenLDAP resource -->
 			<resourceRef oid="28b699cc-107c-11e6-8277-034841879377" type="c:ResourceType"/>
 			<kind>account</kind>
 			<intent>default</intent>
@@ -124,6 +127,5 @@
 			</expression>
 		</condition>
 	</inducement>
-	
-	<roleType>meta</roleType>
+
 </role>
