@@ -117,7 +117,7 @@
             <objectSynchronization>
                 <objectClass>AccountObjectClass</objectClass>
                 <intent>Account</intent>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
 
                 <correlation>
                     <q:equal>
@@ -128,7 +128,7 @@
                     </q:equal>
                 </correlation>
 
-                <reconcile>false</reconcile>
+                <!-- <reconcile>false</reconcile> -->
                 <reaction>
                     <situation>linked</situation>
                     <synchronize>true</synchronize>
